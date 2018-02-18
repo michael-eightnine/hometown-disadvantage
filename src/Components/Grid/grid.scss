@@ -9,11 +9,10 @@ $symbol-height: 100px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    align-items: center;
   }
 
   &__item {
-    flex: 1 1 33.33%;
+    width: 33.33%;
     padding: 35px;
     background-color: #fff;
   }

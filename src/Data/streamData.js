@@ -48,18 +48,6 @@ export default [
     symbol: "cheree.svg"
   },
   {
-    image: "i hate this.svg",
-    title: "",
-    subtitle: "",
-    symbol: "i hate this.svg"
-  },
-  {
-    image: "rear window.svg",
-    title: "",
-    subtitle: "",
-    symbol: "rear window.svg"
-  },
-  {
     image: "letter from the sea.svg",
     title: "",
     subtitle: "",
