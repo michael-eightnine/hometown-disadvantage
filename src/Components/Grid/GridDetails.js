@@ -38,19 +38,33 @@ class GridDetails extends Component {
   handleKeyPress = (e) => {
     const key = e.key || e.keyCode;
     const { history, nextItem, prevItem } = this.props;
+
     switch (key) {
       // Left & Up arrows go to previous
-      case 'ArrowLeft' || 37 || 'ArrowUp' || 38 : {
+      case 'ArrowLeft' || 37: {
+        e.preventDefault();
+        history.push(`/content-stream/${prevItem}`);
+        break;
+      }
+      case 'ArrowUp' || 38 : {
+        e.preventDefault();
         history.push(`/content-stream/${prevItem}`);
         break;
       }
       // Right & Down arrows go to next
-      case 'ArrowRight' || 39 || 'ArrowDown' || 40 : {
+      case 'ArrowRight' || 39: {
+        e.preventDefault();
+        history.push(`/content-stream/${nextItem}`);
+        break;
+      }
+      case 'ArrowDown' || 40 : {
+        e.preventDefault();
         history.push(`/content-stream/${nextItem}`);
         break;
       }
       // Escape "closes" this view, returning to grid
       case 'Escape' || 27: {
+        e.preventDefault();
         history.push('/content-stream');
         break;
       }
@@ -73,8 +87,7 @@ class GridDetails extends Component {
       item: {
         image,
         title,
-        subtitle,
-        symbol
+        subtitle
       },
       prevItem,
       nextItem,
@@ -83,7 +96,7 @@ class GridDetails extends Component {
     } = this.props;
 
     const imageSrc = `${IMAGE_CONTENT_PATH}${image}`;
-    const symbolSrc = `${IMAGE_CONTENT_PATH}${symbol}`;
+    const symbolSrc = `${IMAGE_CONTENT_PATH}${image}--symbol`;
 
     return (
       <Swipeable
@@ -129,8 +142,7 @@ GridDetails.propTypes = {
   item: PropTypes.shape({
     image: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    subtitle: PropTypes.string,
-    symbol: PropTypes.string
+    subtitle: PropTypes.string
   }),
   prevItem: PropTypes.number.isRequired,
   nextItem: PropTypes.number.isRequired,

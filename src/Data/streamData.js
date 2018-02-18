@@ -2,151 +2,126 @@ export default [
   {
     image: "army man.svg",
     title: "",
-    subtitle: "",
-    symbol: "army man.svg"
+    subtitle: ""
   },
   {
     image: "people cry.svg",
     title: "people cry",
-    subtitle: `shed tears, especially as an expression of distress or pain. "don't cry—it'll be all right"`,
-    symbol: "people cry.svg"
+    subtitle: `shed tears, especially as an expression of distress or pain. "don't cry—it'll be all right"`
   },
   {
     image: "corner pocket.svg",
     title: "",
-    subtitle: "",
-    symbol: "corner pocket.svg"
+    subtitle: "possible answers are affirmative, five are negative, and five are non-committal"
   },
   {
     image: "tears.svg",
-    title: "",
-    subtitle: "",
-    symbol: "tears.svg"
+    title: "1 day b4",
+    subtitle: "pull or rip (something) apart or to pieces with force (to produce tears)"
   },
   {
     image: "im yr dog.svg",
-    title: "",
-    subtitle: "",
-    symbol: "im yr dog.svg"
+    title: 'ich lüge',
+    subtitle: "I've been crazy for this boy I really like his gun—I've got nowhere to run"
   },
   {
     image: "red vase.svg",
     title: "",
-    subtitle: "",
-    symbol: "red vase.svg"
+    subtitle: ""
   },
   {
     image: "koolaid.svg",
     title: "",
-    subtitle: "",
-    symbol: "koolaid.svg"
+    subtitle: ""
   },
   {
     image: "cheree.svg",
     title: "",
-    subtitle: "",
-    symbol: "cheree.svg"
+    subtitle: ""
   },
   {
     image: "letter from the sea.svg",
     title: "",
-    subtitle: "",
-    symbol: "letter from the sea.svg"
+    subtitle: ""
   },
   {
     image: "soupbowl.svg",
     title: "",
-    subtitle: "",
-    symbol: "soupbowl.svg"
+    subtitle: ""
   },
   {
     image: "heirloom.svg",
     title: "",
-    subtitle: "",
-    symbol: "heirloom.svg"
+    subtitle: ""
   },
   {
     image: "yea lime.svg",
     title: "",
-    subtitle: "",
-    symbol: "yea lime.svg"
+    subtitle: ""
   },
   {
     image: "urn.svg",
     title: "",
-    subtitle: "",
-    symbol: "urn.svg"
+    subtitle: ""
   },
   {
     image: "beetljuic.svg",
     title: "",
-    subtitle: "",
-    symbol: "beetljuic.svg"
+    subtitle: ""
   },
   {
     image: "left my heart alone.svg",
     title: "",
-    subtitle: "",
-    symbol: "left my heart alone.svg"
+    subtitle: ""
   },
   {
     image: "snake eights.svg",
     title: "",
-    subtitle: "",
-    symbol: "snake eights.svg"
+    subtitle: ""
   },
   {
     image: "15set.svg",
     title: "",
-    subtitle: "",
-    symbol: "15set.svg"
+    subtitle: ""
   },
   {
     image: "cross2bear.svg",
     title: "",
-    subtitle: "",
-    symbol: "cross2bear.svg"
+    subtitle: ""
   },
   {
     image: "walled garden.svg",
     title: "",
-    subtitle: "",
-    symbol: "walled garden.svg"
+    subtitle: ""
   },
   {
     image: "fish soup.svg",
     title: "",
-    subtitle: "",
-    symbol: "fish soup.svg"
+    subtitle: ""
   },
   {
     image: "waterfall.svg",
     title: "",
-    subtitle: "",
-    symbol: "waterfall.svg"
+    subtitle: ""
   },
   {
     image: "future9s.svg",
     title: "",
-    subtitle: "",
-    symbol: "future9s.svg"
+    subtitle: ""
   },
   {
     image: "cover the world.svg",
     title: "",
-    subtitle: "",
-    symbol: "cover the world.svg"
+    subtitle: ""
   },
   {
     image: "coughinnails.svg",
     title: "",
-    subtitle: "",
-    symbol: "coughinnails.svg"
+    subtitle: ""
   },
   {
     image: "matchbox tears.svg",
     title: "",
-    subtitle: "",
-    symbol: "matchbox tears.svg"
+    subtitle: ""
   }
 ]
