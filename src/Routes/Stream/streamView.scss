@@ -1,0 +1,20 @@
+@import '../../scss/vars';
+
+.view__stream--fade-in {
+  .details__copy,
+  .details__control,
+  .details__count {
+    opacity: 0;
+    animation: fadeIn $fade-in-duration ease 1 forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

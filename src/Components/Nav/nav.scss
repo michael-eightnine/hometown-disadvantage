@@ -1,7 +1,9 @@
+@import '../../scss/vars';
+
 .nav {
   text-align: right;
   opacity: 1;
-  transition: opacity .4s ease;
+  transition: opacity $fade-in-duration ease;
 
   &--is-splash {
     opacity: 0;
@@ -10,6 +12,7 @@
 
   &__logo {
     width: 150px;
+    min-height: 63px;
   }
 
   &__links {
