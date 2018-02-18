@@ -1,0 +1,55 @@
+@import '../../scss/vars';
+
+.view__splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.splash {
+  &__image {
+    position: absolute;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50vh;
+    width: 50vh;
+    transition: all 1.75s cubic-bezier(0.68, -0.45, 0.265, 1.35);
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    &.splash__animate {
+      top: 0;
+      left: calc((100% - 300px) / 4);
+      width: calc((100% - 300px) / 2);
+      height: 100vh;
+
+      img {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 60vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55vh;
+    transition: opacity 1.25s ease;
+    transition-delay: .25s;
+
+    &.splash__animate {
+      opacity: 0;
+    }
+  }
+}

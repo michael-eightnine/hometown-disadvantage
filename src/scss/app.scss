@@ -1,0 +1,43 @@
+@import 'reset';
+@import 'vars';
+
+* { box-sizing: border-box; }
+
+body {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  font-family: 'Libre Baskerville', sans-serif;
+}
+
+.app-container {
+  display: flex;
+  flew-flow: row nowrap;
+  align-content: stretch;
+  background-color: #fff;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: $nav-outer-width;
+  padding: $app-padding $app-padding $app-padding $nav-padding;
+}
+
+.content {
+  width: calc(100% - #{$nav-outer-width});
+  padding: $app-padding $nav-padding $app-padding $app-padding;
+}
+
+.standard-link {
+  text-decoration: underline;
+  padding: 5px;
+  color: #000;
+  background-color: #fff;
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
