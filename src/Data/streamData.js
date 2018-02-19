@@ -2,7 +2,7 @@ export default [
   {
     image: "cover the world",
     title: "cover the world",
-    subtitle: `We aim to “cover the earth” aim to cover "the world", the rest doesn't exist`
+    subtitle: `we aim to “cover the earth” aim to cover "the world", the rest doesn't exist`
   },
   {
     image: "people cry",
@@ -32,7 +32,7 @@ export default [
   {
     image: "15set",
     title: "15set",
-    subtitle: ""
+    subtitle: "on one side of the school there is a set of 20 stairs known simply as El Toro 20 (-5)"
   },
   {
     image: "letter from the sea",
@@ -77,17 +77,17 @@ export default [
   {
     image: "coughinnails",
     title: "french tips",
-    subtitle: "Why the barbed wire? Do they climb in at night? Or could they climb out sometimes"
+    subtitle: "why don't you just come back to us? (I don't think I can get it out of me anymore)"
   },
   {
     image: "urn",
     title: "nightvision",
-    subtitle: ""
+    subtitle: "why the barbed wire? Do they climb in at night? No, they climb out."
   },
   {
     image: "waterfall",
-    title: "falls",
-    subtitle: ""
+    title: "premonition",
+    subtitle: "(looking disturbed) I don't think we survived that crash—how'd you guess?"
   },
   {
     image: "tears",
@@ -96,27 +96,27 @@ export default [
   },
   {
     image: "koolaid",
-    title: "",
-    subtitle: ""
+    title: "x-ray",
+    subtitle: "deeper than the blood I'm submerged in, black checkered floor with the red velvet curtain"
   },
   {
     image: "fish soup",
     title: "fish soup",
-    subtitle: ""
+    subtitle: "partook in the ritual (never even noticed) till I realized a pause in the decay"
   },
   {
     image: "matchbox tears",
     title: "altered state",
-    subtitle: ""
+    subtitle: "I was never real to him. (crying) Nothing in the human experience is real to him."
   },
   {
     image: "red vase",
     title: "collection urn",
-    subtitle: ""
+    subtitle: `this one he wrote in cold blood with a toothpick...he said "True" through acoustics`
   },
   {
     image: "beetljuic",
     title: "beetljuic",
-    subtitle: ""
+    subtitle: "when the cup overflows—death's in your blood, fear's all in your head"
   }
 ]
