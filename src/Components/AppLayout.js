@@ -12,10 +12,12 @@ import {
   AboutView
 } from 'Routes';
 import { Nav } from 'Components/Nav';
+import { BASE_URL } from 'Data/constants';
 import streamData from 'Data/streamData';
 
 const AppLayout = () => (
-  <Router>
+  // TODO: DEV ONLY BASENAME!
+  <Router basename={BASE_URL}>
     <LastLocationProvider watchOnlyPathname>
       <div className="app-container">
         <main className="content">
@@ -35,7 +37,7 @@ const AppLayout = () => (
             {/* Fallback Route, redirect to splash on unknown route */}
             <Route
               path='/'
-              render={ () => <Redirect to='/' /> }
+              render={() => <Redirect to='/' />}
             />
           </Switch>
         </main>

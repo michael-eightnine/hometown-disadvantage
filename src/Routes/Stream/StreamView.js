@@ -1,6 +1,7 @@
 import React from 'react';
 import { withLastLocation } from 'react-router-last-location';
 import { Grid } from 'Components/Grid';
+import { BASE_URL } from 'Data/constants';
 import streamContent from 'Data/streamData';
 import './streamView.scss';
 
@@ -19,7 +20,7 @@ const StreamView = ({ match, lastLocation }) => {
     : null;
   let sectionClass = 'view view__stream';
   if (lastLocation) {
-    sectionClass = lastLocation.pathname === '/'
+    sectionClass = lastLocation.pathname === BASE_URL
       ? 'view view__stream view__stream--fade-in'
       : 'view view__stream';
   }
