@@ -95,8 +95,8 @@ class GridDetails extends Component {
       current
     } = this.props;
 
-    const imageSrc = `${IMAGE_CONTENT_PATH}${image}`;
-    const symbolSrc = `${IMAGE_CONTENT_PATH}${image}--symbol`;
+    const imageSrc = `${IMAGE_CONTENT_PATH}${image}.svg`;
+    const symbolSrc = `${IMAGE_CONTENT_PATH}${image}.jpg`;
 
     return (
       <Swipeable
@@ -113,8 +113,7 @@ class GridDetails extends Component {
             </div>
           </div>
           <div className="details__copy">
-            {/* <img className="details__symbol" src={symbolSrc} alt="?" /> */}
-            <img className="details__symbol" src="https://i.ebayimg.com/thumbs/images/m/mIr1ZhEgiiXWMDr4AGABn2g/s-l225.jpg" />
+            <img className="details__symbol" src={symbolSrc} alt="?symbol?" />
             <h2>{title}</h2>
             <p>[{subtitle}]</p>
           </div>

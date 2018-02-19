@@ -11,8 +11,13 @@
   }
 
   &__logo {
-    width: 150px;
-    min-height: 63px;
+    width: 100%;
+    max-width: 160px;
+    min-height: 67px;
+
+    @media(max-width: 900px) {
+      max-width: 120px;
+    }
   }
 
   &__links {

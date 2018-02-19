@@ -16,7 +16,7 @@ import { IMAGE_CONTENT_PATH } from 'Data/constants';
 const GridItem = ({ image, to }) => (
   <div className="grid__item">
     <Link to={`/content-stream/${to}`}>
-      <img src={`${IMAGE_CONTENT_PATH}${image}`} alt=":(" />
+      <img src={`${IMAGE_CONTENT_PATH}${image}.svg`} alt=":(" />
     </Link>
   </div>
 );

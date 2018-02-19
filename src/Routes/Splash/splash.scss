@@ -36,6 +36,18 @@
         max-width: 100%;
         max-height: 100%;
       }
+
+      @media(max-width: 900px) {
+        left: calc((100% - 155px) / 4);
+        width: calc((100% - 155px) / 2);
+        padding-top: 12.5vw;
+      }
+
+      @media(max-width: 500px) {
+        width: 52.5vw;
+        left: calc(52.5vw / 2);
+        padding-top: 18vw;
+      }
     }
   }
 

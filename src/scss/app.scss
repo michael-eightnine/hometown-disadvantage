@@ -22,12 +22,26 @@ body {
   top: 0;
   right: 0;
   width: $nav-outer-width;
-  padding: $app-padding $app-padding $app-padding $nav-padding;
+  padding: $app-padding 65px $app-padding $nav-padding;
+
+  @media(max-width: 900px) {
+    width: 180px;
+    padding: 20px 35px 20px 20px;
+  }
 }
 
 .content {
   width: calc(100% - #{$nav-outer-width});
-  padding: $app-padding $nav-padding $app-padding $app-padding;
+  padding: $app-padding 0 $app-padding $app-padding;
+
+  @media(max-width: 900px) {
+    padding: 20px;
+    width: calc(100% - 150px);
+  }
+
+  @media(max-width: 500px) {
+    padding: 15px 0 15px 15px;
+  }
 }
 
 .standard-link {
