@@ -21,6 +21,12 @@ SetOutputFilter DEFLATE
 Header set Cache-Control "max-age=31536050"
 </FilesMatch>
 
+# Cache JS/CSS for 1 week
+# DISABLED FOR DEV
+# <FilesMatch "\.(js|css)$">
+# Header set Cache-Control "max-age=604800"
+# </FilesMatch>
+
  RewriteRule ^index\.html$ - [L]
  RewriteCond %{REQUEST_FILENAME} !-f
  RewriteCond %{REQUEST_FILENAME} !-d
