@@ -1,0 +1,78 @@
+@import '../../scss/vars';
+
+.view__about {
+  position: relative;
+  height: calc(100vh - (#{$app-padding} * 2));
+
+  @media(max-width: 900px) {
+    height: calc(100vh - 40px);
+  }
+
+  @media(max-width: 500px) {
+    height: calc(100vh - 30px);
+  }
+}
+
+.about {
+  &__image {
+    position: absolute;
+    top: 5vh;
+    left: 2vw;
+    width: 70%;
+    max-width: 550px;
+
+    @media(max-width: 1200px) {
+      max-width: 500px;
+    }
+
+    @media(max-width: 900px) {
+      max-width: 400px
+    }
+
+    @media(max-width: 500px) {
+      top: 7vh;
+      width: 90%;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 0;
+    right: calc(-#{$nav-outer-width} / 3);
+    width: 70%;
+
+    p {
+      font-size: 12px;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__highlight {
+    font-style: italic;
+  }
+
+  @media(max-width: 900px) {
+    &__content {
+      bottom: 10%;
+      right: auto;
+      left: 10vw;
+      width: calc(100% - 7.5vw);
+    }
+  }
+
+  @media(max-width: 500px) {
+    &__content {
+      bottom: 3.5%;
+      right: auto;
+      left: 3vw;
+      width: calc(100%);
+
+      p {
+        font-size: 10px;
+        line-height: 1.7;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

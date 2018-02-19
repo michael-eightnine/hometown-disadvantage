@@ -8,7 +8,8 @@ import {
 import { LastLocationProvider } from 'react-router-last-location';
 import {
   SplashView,
-  StreamView
+  StreamView,
+  AboutView
 } from 'Routes';
 import { Nav } from 'Components/Nav';
 import streamData from 'Data/streamData';
@@ -30,6 +31,12 @@ const AppLayout = () => (
               // Otherwise, show the Stream with details open
               return <StreamView match={match} />;
             }} />
+            <Route exact path="/about-the-hta" component={AboutView} />
+            {/* Fallback Route, redirect to splash on unknown route */}
+            <Route
+              path='/'
+              render={ () => <Redirect to='/' /> }
+            />
           </Switch>
         </main>
         <Nav />

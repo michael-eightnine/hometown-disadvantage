@@ -2,7 +2,7 @@ export default [
   {
     image: "cover the world",
     title: "cover the world",
-    subtitle: ""
+    subtitle: `We aim to “cover the earth” aim to cover "the world", the rest doesn't exist`
   },
   {
     image: "people cry",
@@ -16,8 +16,8 @@ export default [
   },
   {
     image: "cross2bear",
-    title: "",
-    subtitle: ""
+    title: "snake oil",
+    subtitle: '"her shoulders were as white as marble", n the marble holds her still'
   },
   {
     image: "im yr dog",
@@ -31,7 +31,7 @@ export default [
   },
   {
     image: "15set",
-    title: "",
+    title: "15set",
     subtitle: ""
   },
   {
@@ -47,7 +47,7 @@ export default [
   {
     image: "snake eights",
     title: "oregon vice",
-    subtitle: "out at the tracks won't someone tell her father"
+    subtitle: "out at the tracks won't someone tell her father how much we miss her"
   },
   {
     image: "soupbowl",
@@ -57,7 +57,7 @@ export default [
   {
     image: "heirloom",
     title: "heir(s)",
-    subtitle: ""
+    subtitle: "the only living person who even calls me (you can't live on memories alone)"
   },
   {
     image: "yea lime",
@@ -77,16 +77,16 @@ export default [
   {
     image: "coughinnails",
     title: "french tips",
-    subtitle: ""
+    subtitle: "Why the barbed wire? Do they climb in at night? Or could they climb out sometimes"
   },
   {
     image: "urn",
-    title: "",
+    title: "nightvision",
     subtitle: ""
   },
   {
     image: "waterfall",
-    title: "",
+    title: "falls",
     subtitle: ""
   },
   {
@@ -106,17 +106,17 @@ export default [
   },
   {
     image: "matchbox tears",
-    title: "",
+    title: "altered state",
     subtitle: ""
   },
   {
     image: "red vase",
-    title: "transparency",
+    title: "collection urn",
     subtitle: ""
   },
   {
     image: "beetljuic",
-    title: "",
+    title: "beetljuic",
     subtitle: ""
   }
 ]
