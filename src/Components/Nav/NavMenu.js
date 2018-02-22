@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { BASE_URL } from 'Data/constants';
 import logo from 'Svg/logo-stacked-thin.svg';
 import './nav.scss';
 
@@ -14,7 +13,7 @@ import './nav.scss';
 const NavMenu = () => {
   // This component exists outside of the Router's `<Switch>` case
   // So window.location.pathname is used instead of `withRouter` props
-  const navClass = window.location.pathname === `${BASE_URL}/`
+  const navClass = window.location.pathname === '/'
     ? 'nav--is-splash'
     : '';
 

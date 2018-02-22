@@ -13,12 +13,10 @@ import {
   DetailView
 } from 'Routes';
 import { Nav } from 'Components/Nav';
-import { BASE_URL } from 'Data/constants';
 import streamData from 'Data/streamData';
 
 const AppLayout = () => (
-  // TODO: DEV ONLY BASENAME!
-  <Router basename={BASE_URL}>
+  <Router>
     <LastLocationProvider watchOnlyPathname>
       <div className="app-container">
         <main className="content">
