@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import Swipeable from 'react-swipeable';
 import { Link, withRouter } from 'react-router-dom';
 import { IMAGE_CONTENT_PATH } from 'Data/constants';
+import './details.scss';
 
 /**
- * Displays the grid details overlay/full screen modal
+ * Displays the grid details view
  * Shows the image, title, subtitle and symbol
  * Includes next/prev buttons and the current "page" number out of total items
  * Additionally handles arrow key & touchswipe controls for next/prev navigation
@@ -17,9 +18,9 @@ import { IMAGE_CONTENT_PATH } from 'Data/constants';
  * @param {number} props.count - total number of grid items
  * @param {number} props.current - current selected index relative to grid items array
  *
- * @returns {Component} - GridDetails component
+ * @returns {ReactComponent} - Details component
  */
-class GridDetails extends Component {
+class Details extends Component {
   // Attach keypress event listener on mount
   componentWillMount() {
     window.addEventListener('keydown', this.handleKeyPress)
@@ -137,7 +138,7 @@ class GridDetails extends Component {
   }
 };
 
-GridDetails.propTypes = {
+Details.propTypes = {
   item: PropTypes.shape({
     image: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
@@ -150,4 +151,4 @@ GridDetails.propTypes = {
   history: PropTypes.object.isRequired
 };
 
-export default withRouter(GridDetails);
+export default withRouter(Details);

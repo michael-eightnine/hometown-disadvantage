@@ -27,7 +27,7 @@ export default [
   {
     image: "left my heart alone",
     title: "glasshouse",
-    subtitle: "buried my heart inna wounded creek last time I saw my baby"
+    subtitle: "buried my heart inna wounded creek last time I saw my baby n I ain't seen it since"
   },
   {
     image: "15set",

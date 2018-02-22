@@ -1,6 +1,7 @@
 @import '../../scss/vars';
 
-.view__stream--fade-in {
+// Fade in animation for Splash --> DetailView route transition
+.view__detail--fade-in {
   .details__copy,
   .details__control,
   .details__count {

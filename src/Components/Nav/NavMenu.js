@@ -4,7 +4,16 @@ import { BASE_URL } from 'Data/constants';
 import logo from 'Svg/logo-stacked-thin.svg';
 import './nav.scss';
 
+/**
+ * Nav Menu component
+ * Renders the navigation links that appear under the HTA logo
+ * A special nav class is applied to hide this menu on the splash page (index page)
+ *
+ * @returns {ReactComponent} NavMenu component
+ */
 const NavMenu = () => {
+  // This component exists outside of the Router's `<Switch>` case
+  // So window.location.pathname is used instead of `withRouter` props
   const navClass = window.location.pathname === `${BASE_URL}/`
     ? 'nav--is-splash'
     : '';
