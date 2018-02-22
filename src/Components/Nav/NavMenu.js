@@ -1,10 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { BASE_URL } from 'Data/constants';
 import logo from 'Svg/logo-stacked-thin.svg';
 import './nav.scss';
 
 const NavMenu = () => {
-  const navClass = window.location.pathname === '/'
+  const navClass = window.location.pathname === `${BASE_URL}/`
     ? 'nav--is-splash'
     : '';
 

@@ -109,6 +109,11 @@ $symbol-height: 100px;
       font-size: 12px;
       line-height: 1.4;
       letter-spacing: .05rem;
+
+      @media(max-width: 500px) {
+        bottom: 27%;
+        right: calc(-80px);
+      }
     }
   }
 
