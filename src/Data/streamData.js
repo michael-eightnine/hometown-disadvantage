@@ -36,11 +36,6 @@ export default [
       subtitle: "buried my heart inna wounded creek last time I saw my baby n I ain't seen it since"
     },
     {
-      image: "15set",
-      title: "15set",
-      subtitle: "on one side of the school there is a set of 20 stairs known simply as El Toro 20 (-5)"
-    },
-    {
       image: "letter from the sea",
       title: "deep2",
       subtitle: "set one's heart on, be dying for—sent the letter from the sea"
@@ -111,19 +106,9 @@ export default [
       subtitle: "partook in the ritual (never even noticed) till I realized a pause in the decay"
     },
     {
-      image: "matchbox tears",
-      title: "altered state",
-      subtitle: "I was never real to him. (crying) Nothing in the human experience is real to him."
-    },
-    {
       image: "red vase",
       title: "collection urn",
       subtitle: `this one he wrote in cold blood with a toothpick...he said "True" through acoustics`
-    },
-    {
-      image: "beetljuic",
-      title: "beetljuic",
-      subtitle: "when the cup overflows—death's in your blood, fear's all in your head"
     }
   ]
 ]
