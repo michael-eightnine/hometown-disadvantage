@@ -24,7 +24,7 @@ const NavMenu = () => {
         <li className="nav__link">
           <NavLink
             exact
-            to="/content-stream"
+            to="/content-stream/0"
             activeClassName="nav-link--active"
           >
             See-It-All

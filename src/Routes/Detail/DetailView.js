@@ -12,12 +12,13 @@ import './detailView.scss';
  * Additionally, depending on the `lastLocation`, a transition class is added for CSS animation
  *
  * @param {object} props - props object
- * @param {number} props.activeId - the currently selected item's index, via route render method & `match`
+ * @param {number} props.chapterId - the currently selected chapter (page) of content
+ * @param {number} props.contentId - the currently selected content item's index
  * @param {object} props.lastLocation - describes the previous route the user came to this view from
  *
  * @returns {ReactComponent} - Detail View top-level route component
  */
-const DetailView = ({ activeId, lastLocation }) => {
+const DetailView = ({ chapterId, contentId, lastLocation }) => {
   let sectionClass = 'view view__stream';
   if (lastLocation) {
     sectionClass = lastLocation.pathname === '/'
@@ -25,16 +26,18 @@ const DetailView = ({ activeId, lastLocation }) => {
       : 'view view__detail';
   }
 
-  const count = streamContent.length - 1;
-  const nextItem = activeId === count ? 0 : activeId + 1;
-  const prevItem = activeId === 0 ? count : activeId - 1;
+  const chapterContent = streamContent[chapterId].content;
+  const count = chapterContent.length - 1;
+  const nextItem = contentId === count ? 0 : contentId + 1;
+  const prevItem = contentId === 0 ? count : contentId - 1;
 
   return (
     <section className={sectionClass}>
       <Details
-        item={streamContent[activeId]}
+        item={chapterContent[contentId]}
+        chapter={chapterId}
         count={count}
-        current={activeId}
+        current={contentId}
         prevItem={prevItem}
         nextItem={nextItem}
       />
@@ -43,7 +46,8 @@ const DetailView = ({ activeId, lastLocation }) => {
 };
 
 DetailView.propTypes = {
-  activeId: PropTypes.number.isRequired,
+  chapterId: PropTypes.number.isRequired,
+  contentId: PropTypes.number.isRequired,
   lastLocation: PropTypes.object
 };
 

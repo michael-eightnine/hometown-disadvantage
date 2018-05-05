@@ -34,7 +34,7 @@ class Splash extends Component {
       })
     }, 1000)
     setTimeout(() => {
-      this.props.history.push('/content-stream/0');
+      this.props.history.push('/content-stream/0/0');
     }, 3000)
   }
 

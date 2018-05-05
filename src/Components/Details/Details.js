@@ -17,6 +17,7 @@ import './details.scss';
  * @param {number} props.nextItem - the next item's index to link to
  * @param {number} props.count - total number of grid items
  * @param {number} props.current - current selected index relative to grid items array
+ * @param {number} props.chapter - the current chapter of content to display items from
  *
  * @returns {ReactComponent} - Details component
  */
@@ -38,35 +39,35 @@ class Details extends Component {
    */
   handleKeyPress = (e) => {
     const key = e.key || e.keyCode;
-    const { history, nextItem, prevItem } = this.props;
+    const { history, nextItem, prevItem, chapter } = this.props;
 
     switch (key) {
       // Left & Up arrows go to previous
       case 'ArrowLeft' || 37: {
         e.preventDefault();
-        history.push(`/content-stream/${prevItem}`);
+        history.push(`/content-stream/${chapter}/${prevItem}`);
         break;
       }
       case 'ArrowUp' || 38 : {
         e.preventDefault();
-        history.push(`/content-stream/${prevItem}`);
+        history.push(`/content-stream/${chapter}/${prevItem}`);
         break;
       }
       // Right & Down arrows go to next
       case 'ArrowRight' || 39: {
         e.preventDefault();
-        history.push(`/content-stream/${nextItem}`);
+        history.push(`/content-stream/${chapter}/${nextItem}`);
         break;
       }
       case 'ArrowDown' || 40 : {
         e.preventDefault();
-        history.push(`/content-stream/${nextItem}`);
+        history.push(`/content-stream/${chapter}/${nextItem}`);
         break;
       }
       // Escape "closes" this view, returning to grid
       case 'Escape' || 27: {
         e.preventDefault();
-        history.push('/content-stream');
+        history.push(`/content-stream/${chapter}`);
         break;
       }
       default: return
@@ -80,7 +81,8 @@ class Details extends Component {
    * @param {number} newIndex - index of the detail view to redirect to
    */
   onSwiped = (newIndex) => {
-    this.props.history.push(`/content-stream/${newIndex}`);
+    const { history, chapter } = this.props;
+    history.push(`/content-stream/${chapter}/${newIndex}`);
   }
 
   render() {
@@ -93,7 +95,8 @@ class Details extends Component {
       prevItem,
       nextItem,
       count,
-      current
+      current,
+      chapter
     } = this.props;
 
     const imageSrc = `${IMAGE_CONTENT_PATH}${image}.svg`;
@@ -121,13 +124,13 @@ class Details extends Component {
           <div className="details__control">
             <Link
               className="details__next standard-link"
-              to={`/content-stream/${nextItem}`}
+              to={`/content-stream/${chapter}/${nextItem}`}
             >
               [next]
             </Link>
             <Link
               className="details__prev standard-link"
-              to={`/content-stream/${prevItem}`}
+              to={`/content-stream/${chapter}/${prevItem}`}
             >
               [prev]
             </Link>
@@ -148,7 +151,8 @@ Details.propTypes = {
   nextItem: PropTypes.number.isRequired,
   count: PropTypes.number.isRequired,
   current: PropTypes.number.isRequired,
-  history: PropTypes.object.isRequired
+  history: PropTypes.object.isRequired,
+  chapter: PropTypes.number.isRequired
 };
 
 export default withRouter(Details);
