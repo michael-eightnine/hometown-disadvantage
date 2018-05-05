@@ -8,18 +8,19 @@ import './grid.scss';
  * Handles the details view/modal visibility and active item via container props
  *
  * @param {object} props - props object
+ * @param {number} props.chapter - the current chapter of items to display
  * @param {object[]} props.items - array of items to display in the grid
  *
  * @returns {ReactComponent} - the Grid component
  */
-const Grid = ({ items }) => (
+const Grid = ({ chapter, items }) => (
   <section className="grid">
     <div className="grid__list">
       {items.map((item, i) => (
         <GridItem
           key={item.image}
           image={item.image}
-          to={i}
+          to={`${chapter}/${i}`}
         />
       ))}
     </div>
@@ -27,7 +28,8 @@ const Grid = ({ items }) => (
 );
 
 Grid.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.object).isRequired
+  items: PropTypes.arrayOf(PropTypes.object).isRequired,
+  chapter: PropTypes.number.isRequired
 };
 
 export default Grid;
