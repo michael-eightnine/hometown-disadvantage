@@ -40,7 +40,7 @@ class Splash extends Component {
 
   render() {
     const { prepareRedirect } = this.state;
-    const featureImage = `${IMAGE_CONTENT_PATH}${streamData[0].image}.svg`;
+    const featureImage = `${IMAGE_CONTENT_PATH}${streamData[0].content[0].image}.svg`;
     const imageClass = prepareRedirect
       ? 'splash__animate'
       : '';

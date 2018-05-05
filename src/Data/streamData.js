@@ -15,11 +15,6 @@ export default [
         subtitle: `just a cavity to soak up my guilt—the flowers wilting down so they can laugh at me`
       },
       {
-        image: "1st floor",
-        title: "1st floor",
-        subtitle: `lorem ipsum it takes a while to figure out these subtitles, so lets not do it now`
-      },
-      {
         image: "set drop",
         title: "set drop",
         subtitle: `lorem ipsum it takes a while to figure out these subtitles, so lets not do it now`

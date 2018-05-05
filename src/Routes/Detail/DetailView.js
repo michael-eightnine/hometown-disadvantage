@@ -26,7 +26,11 @@ const DetailView = ({ chapterId, contentId, lastLocation }) => {
       : 'view view__detail';
   }
 
+  // Determine chapter count, next chapter, and chapter count
+  const chapterCount = streamContent.length - 1;
+  const nextChapter = chapterId === chapterCount ? 0 : chapterId + 1;
   const chapterContent = streamContent[chapterId].content;
+  // Determine item count, next item, and previous item
   const count = chapterContent.length - 1;
   const nextItem = contentId === count ? 0 : contentId + 1;
   const prevItem = contentId === 0 ? count : contentId - 1;
@@ -35,11 +39,13 @@ const DetailView = ({ chapterId, contentId, lastLocation }) => {
     <section className={sectionClass}>
       <Details
         item={chapterContent[contentId]}
-        chapter={chapterId}
         count={count}
         current={contentId}
         prevItem={prevItem}
         nextItem={nextItem}
+        chapter={chapterId}
+        chapterCount={chapterCount}
+        nextChapter={nextChapter}
       />
     </section>
   )
