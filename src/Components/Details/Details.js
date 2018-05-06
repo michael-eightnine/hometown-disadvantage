@@ -4,6 +4,7 @@ import Swipeable from 'react-swipeable';
 import { withRouter } from 'react-router-dom';
 import { IMAGE_CONTENT_PATH } from 'Data/constants';
 import streamContent from 'Data/streamData'
+import { DetailsTransition } from './';
 import './details.scss';
 
 /**
@@ -27,6 +28,13 @@ import './details.scss';
  * @returns {ReactComponent} - Details component
  */
 class Details extends Component {
+  constructor() {
+    super();
+    this.state = {
+      transitionActive: false
+    }
+  }
+
   // Attach keypress event listener on mount
   componentWillMount() {
     window.addEventListener('keydown', this.handleKeyPress)
@@ -35,6 +43,34 @@ class Details extends Component {
   // Unbind keypress event listener on unmount
   componentWillUnmount() {
     window.removeEventListener('keydown', this.handleKeyPress)
+  }
+
+  componentWillReceiveProps(nextProps) {
+    // If chapters haven't changed, exit early
+    if (this.props.chapter === nextProps.chapter) {
+      return;
+    }
+    // Otherwise the chapter has changed, and time to initiate transition changes
+    this.updateTransitionState(true)
+  }
+
+  /**
+   * Update Transition State
+   * Updates internal state to indicate if a chapter transition is currently occurring
+   * This is called by `DetailsTransition` when its active state changes to block route
+   * changes during that transition.
+   *
+   * @param {boolean} transitionState - are we actively transitioning chapters?
+   */
+  updateTransitionState = (transitionState) => {
+    this.setState({ transitionActive: transitionState });
+
+    // If it was set to true, reset it in 4s
+    if(transitionState) {
+      setTimeout(() => {
+        this.updateTransitionState(false)
+      }, 4000)
+    }
   }
 
   /**
@@ -47,6 +83,10 @@ class Details extends Component {
    * @param {string} direction - is this going to 'prev' or 'next'?
    */
   handleRouteChange = (direction) => {
+    // If we have a chapter transition active, do not redirect the route
+    if (this.state.transitionActive) return;
+
+    // Otherwise determine the correct route to redirect to
     const {
       current,
       nextItem,
@@ -55,7 +95,7 @@ class Details extends Component {
       history,
       chapter,
       nextChapter
-     } = this.props;
+    } = this.props;
     const atChapterEnd = current === count;
     const atChapterStart = current === 0;
     let newRoute;
@@ -134,7 +174,9 @@ class Details extends Component {
       chapter,
       chapterCount
     } = this.props;
+    const { transitionActive } = this.state;
 
+    const transitionMetadata = streamContent[chapter].meta;
     const imageSrc = `${IMAGE_CONTENT_PATH}${image}.svg`;
     const symbolSrc = `${IMAGE_CONTENT_PATH}${image}.jpg`;
 
@@ -145,6 +187,14 @@ class Details extends Component {
         onSwipedRight={() => this.handleRouteChange('prev')}
         onSwipedDown={() => this.handleRouteChange('prev')}
       >
+        <DetailsTransition
+          isActive={transitionActive}
+          title={transitionMetadata.title}
+          subtitle={transitionMetadata.subtitle}
+          media={transitionMetadata.media}
+          mediaType={transitionMetadata.mediaType}
+          chapter={chapter}
+        />
         <div className="grid__details">
           <div className="details__image">
             <img src={imageSrc} alt={title} />

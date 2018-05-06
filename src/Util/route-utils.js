@@ -14,3 +14,12 @@ export const validateStreamRoute = (chapterId, maxChapter) => {
   if (!validId || !withinRange) return false;
   return true;
 }
+
+export const getChapterFromPath = (pathname) => {
+  if (pathname.includes('/content-stream/')) {
+    const start = pathname.indexOf('/content-stream/') + '/content-stream/'.length;
+    const end = start + 1;
+    return pathname.slice(start, end);
+  }
+  return 0;
+};

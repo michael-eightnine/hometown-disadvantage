@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from 'Svg/logo-stacked-thin.svg';
+import { getChapterFromPath } from 'Util';
 import './nav.scss';
 
 /**
@@ -20,15 +21,9 @@ const NavMenu = () => {
 
   // By default the current chapter is 0 (first chapter)
   let currentChapter = 0;
-  // If we're in a content stream page (grid or detail views)
-  // Then slice out the current chapter from the URL by pulling out the character present
-  // immediately after `/content-stream/`, which is the URL param for `chapterId`
-  // NOTE: This will break in the future if we have 10+ (double digit) chapter IDs
-  if (pathname.includes('/content-stream/')) {
-    const start = pathname.indexOf('/content-stream/') + '/content-stream/'.length;
-    const end = start + 1;
-    currentChapter = pathname.slice(start, end);
-  }
+
+  // Get the current chapter from the pathname
+  currentChapter = getChapterFromPath(pathname);
 
   return (
     <nav className={`nav ${navClass}`}>

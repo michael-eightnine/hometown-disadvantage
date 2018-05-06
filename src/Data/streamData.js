@@ -3,10 +3,7 @@ export default [
   {
     meta: {
       title: 'Red & Blue',
-      transitionContent: {
-        title: 'Entering red and blue',
-        subtitle: 'subtitle test'
-      }
+      subtitle: 'subtitle test'
     },
     content: [
       {
@@ -84,11 +81,10 @@ export default [
   // CHAPTER 2 (Black lined drawings)
   {
     meta: {
-      title: 'Heavy Black',
-      transitionContent: {
-        title: 'Entering generation 1',
-        subtitle: 'subtitle test 2'
-      }
+      title: 'lowlight / dark times',
+      subtitle: 'lorem ipsum it takes a while to figure out these subtitles, so lets not do it now,  out these subtitles, so lets not do it now',
+      media: 'chapter-2-transition',
+      mediaType: '.gif'
     },
     content: [
       {

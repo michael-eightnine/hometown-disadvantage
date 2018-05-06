@@ -38,6 +38,7 @@
     width: calc(100vw - #{$nav-outer-width});
     height: 100vh;
     background-color: #fff;
+    transition: opacity .5s ease;
 
     @media(max-width: 900px) {
       width: calc(100vw - 150px);
