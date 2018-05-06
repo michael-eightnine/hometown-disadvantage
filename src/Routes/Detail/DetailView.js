@@ -44,7 +44,6 @@ const DetailView = ({ chapterId, contentId, lastLocation }) => {
         prevItem={prevItem}
         nextItem={nextItem}
         chapter={chapterId}
-        chapterCount={chapterCount}
         nextChapter={nextChapter}
       />
     </section>

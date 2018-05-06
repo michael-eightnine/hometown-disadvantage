@@ -22,7 +22,6 @@ import './details.scss';
  * @param {number} props.count - total number of grid items
  * @param {number} props.current - current selected index relative to grid items array
  * @param {number} props.chapter - the current chapter of content to display items from
- * @param {number} props.chapterCount - the total number of chapters available
  * @param {number} props.nextChapter - the next chapter to load after ending this chapter
  *
  * @returns {ReactComponent} - Details component
@@ -86,7 +85,6 @@ class Details extends Component {
     // If we have a chapter transition active, do not redirect the route
     if (this.state.transitionActive) return;
 
-    // Otherwise determine the correct route to redirect to
     const {
       current,
       nextItem,
@@ -96,8 +94,14 @@ class Details extends Component {
       chapter,
       nextChapter
     } = this.props;
-    const atChapterEnd = current === count;
+    const atStart = chapter === 0 && current === 0;
+    const atEnd = chapter === streamContent.length - 1 && current === count;
+    // If we're at the starting or ending chapter and item and moving in that direction, do nothing
+    if ((direction === 'prev' && atStart) || (direction === 'next' && atEnd))
+      return;
+
     const atChapterStart = current === 0;
+    const atChapterEnd = current === count;
     let newRoute;
     switch (direction) {
       case 'next':
@@ -109,8 +113,9 @@ class Details extends Component {
         break;
       case 'prev':
         newRoute = atChapterStart
-          // If at the chapter start, go to the next chapter's last item (since we're moving backwards)
-          ? `/content-stream/${nextChapter}/${streamContent[nextChapter].content.length - 1}`
+          // If at the chapter start, go to the next chapter's first item
+          // this restarts the previous chapter, since we're moving backwards
+          ? `/content-stream/${nextChapter}/0`
           // Otherwise just go to the previous item
           : `/content-stream/${chapter}/${prevItem}`
         break;
@@ -171,8 +176,7 @@ class Details extends Component {
       },
       count,
       current,
-      chapter,
-      chapterCount
+      chapter
     } = this.props;
     const { transitionActive } = this.state;
 
@@ -200,9 +204,9 @@ class Details extends Component {
             <img src={imageSrc} alt={title} />
             <div className="details__count">
               {`${current + 1} / ${count + 1}`}
-              <span className="details__chapter-count">
-                {`[${chapter + 1} / ${chapterCount + 1}]`}
-              </span>
+            </div>
+            <div className="details__chapter-count">
+              {`[Chapter ${chapter + 1}]`}
             </div>
           </div>
           <div className="details__copy">
@@ -242,7 +246,6 @@ Details.propTypes = {
   current: PropTypes.number.isRequired,
   history: PropTypes.object.isRequired,
   chapter: PropTypes.number.isRequired,
-  chapterCount: PropTypes.number.isRequired,
   nextChapter: PropTypes.number.isRequired
 };
 

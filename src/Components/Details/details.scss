@@ -41,6 +41,27 @@ $symbol-height: 100px;
     letter-spacing: .25rem;
   }
 
+  // Chapter count
+  &__chapter-count {
+    position: absolute;
+    top: 25vh;
+    left: 35px;
+    width: 155px;
+    padding: 3px 6px;
+    font-size: 10px;
+    text-align: left;
+    line-height: 1.4;
+    letter-spacing: .4rem;
+    text-transform: uppercase;
+    background-color: #FFF;
+    transform: translateX(-50%) rotate(-90deg);
+    word-break: keep-all;
+    
+    @media(max-width: 500px) {
+      left: 20px
+    }
+  }
+
   // Content/Text Side
   &__copy {
     position: relative;
@@ -150,10 +171,13 @@ $symbol-height: 100px;
       width: 100%;
       margin-bottom: 5px;
       padding: 3px 6px;
-      font-size: 12px;
+      font-size: 10px;
       text-align: left;
       line-height: 1.4;
+      letter-spacing: .25rem;
+      text-transform: uppercase;
       background-color: #FFF;
+      font-style: normal;
     }
   }
 
