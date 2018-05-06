@@ -64,11 +64,11 @@ class Details extends Component {
   updateTransitionState = (transitionState) => {
     this.setState({ transitionActive: transitionState });
 
-    // If it was set to true, reset it in 4s
+    // If it was set to true, reset after a timeout
     if(transitionState) {
       setTimeout(() => {
         this.updateTransitionState(false)
-      }, 4000)
+      }, 7500)
     }
   }
 
@@ -179,6 +179,8 @@ class Details extends Component {
       chapter
     } = this.props;
     const { transitionActive } = this.state;
+    const atStart = chapter === 0 && current === 0;
+    const atEnd = chapter === streamContent.length - 1 && current === count;
 
     const transitionMetadata = streamContent[chapter].meta;
     const imageSrc = `${IMAGE_CONTENT_PATH}${image}.svg`;
@@ -218,12 +220,14 @@ class Details extends Component {
             <div
               className="details__next standard-link"
               onClick={() => this.handleRouteChange('next')}
+              disabled={atEnd}
             >
               [next]
             </div>
             <div
               className="details__prev standard-link"
               onClick={() => this.handleRouteChange('prev')}
+              disabled={atStart}
             >
               [prev]
             </div>

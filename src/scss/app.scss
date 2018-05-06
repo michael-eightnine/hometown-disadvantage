@@ -55,4 +55,10 @@ body {
     color: #fff;
     background-color: #000;
   }
+
+  &[disabled] {
+    text-decoration: line-through;
+    pointer-events: none;
+    cursor: normal;
+  }
 }

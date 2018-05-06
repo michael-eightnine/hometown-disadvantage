@@ -8,7 +8,12 @@ export default [
     content: [
       {
         image: "goodbye vase",
-        title: "grave within",
+        title: "grave (within a)",
+        subtitle: `just a cavity to soak up my guilt—and the flowers wilting down so they can laugh at me`
+      },
+      {
+        image: "1st floor",
+        title: "1st floor",
         subtitle: `just a cavity to soak up my guilt—the flowers wilting down so they can laugh at me`
       },
       {
@@ -19,11 +24,6 @@ export default [
       {
         image: "carry on 4 me",
         title: "carry on 4 me",
-        subtitle: `lorem ipsum it takes a while to figure out these subtitles, so lets not do it now`
-      },
-      {
-        image: "the moons outside",
-        title: "the moon's outside",
         subtitle: `lorem ipsum it takes a while to figure out these subtitles, so lets not do it now`
       },
       {
@@ -81,8 +81,8 @@ export default [
   // CHAPTER 2 (Black lined drawings)
   {
     meta: {
-      title: 'lowlight / dark times',
-      subtitle: 'lorem ipsum it takes a while to figure out these subtitles, so lets not do it now,  out these subtitles, so lets not do it now',
+      title: 'lowlight & dark times',
+      subtitle: `december 2 march about the coldest months—inside diggin the grave n' outside mercedes mercedes. found em right around 5 feet down`,
       media: 'chapter-2-transition',
       mediaType: '.gif'
     },

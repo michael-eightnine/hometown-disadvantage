@@ -16,6 +16,8 @@ const StreamView = ({ chapterId }) => (
   <section className="view view__stream">
     <Grid
       chapter={chapterId}
+      chapterMax={streamContent.length - 1}
+      chapterTitle={streamContent[chapterId].meta.title}
       items={streamContent[chapterId].content}
     />
   </section>

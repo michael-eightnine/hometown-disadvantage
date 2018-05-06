@@ -6,6 +6,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
+    padding-bottom: 80px;
   }
 
   &__item {
@@ -28,6 +29,7 @@
     }
   }
 
+  // Details view container
   &__details {
     display: flex;
     flex-flow: row nowrap;
@@ -43,5 +45,45 @@
     @media(max-width: 900px) {
       width: calc(100vw - 150px);
     }
+  }
+
+  // Grid Controls
+  &__controls {
+    display: flex;
+    flex-flow: row wrap;
+    position: fixed;
+    left: 20px;
+    bottom: 45px;
+    padding: 10px;
+    background-color: #fff;
+
+    @media(max-width: 900px) {
+      left: 35px;
+      bottom: 20px;
+    }
+
+    @media(max-width: 500px) {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding-bottom: 25px;
+    }
+  }
+
+  &__chapter-title {
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: .25rem;
+  }
+
+  &__next,
+  &__prev {
+    font-size: 12px;
+    flex: 0 0 50%;
+    text-align: center;
+    font-style: italic;
+    letter-spacing: .05rem;
   }
 }

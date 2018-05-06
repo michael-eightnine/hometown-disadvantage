@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { GridItem } from './';
+import { GridItem, GridControls } from './';
 import './grid.scss';
 
 /**
@@ -9,11 +9,13 @@ import './grid.scss';
  *
  * @param {object} props - props object
  * @param {number} props.chapter - the current chapter of items to display
+ * @param {number} props.chapterMax - the maximum amount of chapters available
+ * @param {object} props.chapterTitle - the title of the current chapter
  * @param {object[]} props.items - array of items to display in the grid
  *
  * @returns {ReactComponent} - the Grid component
  */
-const Grid = ({ chapter, items }) => (
+const Grid = ({ chapter, chapterMax, chapterTitle, items }) => (
   <section className="grid">
     <div className="grid__list">
       {items.map((item, i) => (
@@ -24,6 +26,11 @@ const Grid = ({ chapter, items }) => (
         />
       ))}
     </div>
+    <GridControls
+      chapter={chapter}
+      chapterMax={chapterMax}
+      chapterTitle={chapterTitle}
+    />
   </section>
 );
 

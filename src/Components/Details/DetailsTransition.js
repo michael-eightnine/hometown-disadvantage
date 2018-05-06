@@ -2,6 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { IMAGE_CONTENT_PATH } from 'Data/constants';
 
+/**
+ * Details Transition
+ * Displays the transition view before fading out to reveal the detail view below
+ * Fade out time is determined by the parent component `Details`, and the fade animation
+ * is controlled via css classes
+ *
+ * @param {object} props - react props
+ * @param {string} props.title - the title of the chapter transition
+ * @param {string} props.subtitle - the subtitle of the chapter transition
+ * @param {string} props.media - the media name of the chapter transition
+ * @param {string} props.mediaType - the media extension (jpg/png/gif/etc)
+ * @param {number} props.chapter - the index of the chapter being transitioned to
+ * @param {boolean} props.isActive - is this transition active?
+ */
 const DetailsTransition = ({
   title,
   subtitle,
@@ -11,19 +25,19 @@ const DetailsTransition = ({
   isActive
 }) => {
   const className = isActive
-    ? 'grid__transition grid__transition--active'
-    : 'grid__transition grid__transition--hidden';
+    ? 'details__transition details__transition--active'
+    : 'details__transition details__transition--hidden';
 
   return (
     <div className={className}>
-      <h1 className="grid__transition-title">
+      <h1 className="details__transition-title">
         <span>[Chapter {chapter + 1}]</span>
         {title}
       </h1>
-      <p className="grid__transition-subtitle">{subtitle}</p>
+      <p className="details__transition-subtitle">{subtitle}</p>
       {media &&
         <img
-          className="grid__transition-media"
+          className="details__transition-media"
           src={`${IMAGE_CONTENT_PATH}${media}${mediaType}`}
           alt=":)"
         />

@@ -56,7 +56,7 @@ $symbol-height: 100px;
     background-color: #FFF;
     transform: translateX(-50%) rotate(-90deg);
     word-break: keep-all;
-    
+
     @media(max-width: 500px) {
       left: 20px
     }
@@ -126,9 +126,7 @@ $symbol-height: 100px;
   &__next {
     margin-left: 15px;
   }
-}
 
-.grid {
   // Transition view
   &__transition {
     position: absolute;
@@ -139,14 +137,13 @@ $symbol-height: 100px;
     z-index: 20;
     transition: opacity .5s ease;
 
+    @media(max-width: 900px) {
+      width: calc(100vw - 150px);
+    }
+
     &--hidden {
       opacity: 0;
       pointer-events: none;
-    }
-
-    @media(max-width: 500px) {
-      bottom: 27%;
-      width: calc(100vw - #{$nav-outer-width} + 80px);
     }
 
     &--active + .grid__details {
@@ -166,18 +163,33 @@ $symbol-height: 100px;
     z-index: 2;
     text-shadow: -1px 1px 0 #fff, -1px -1px 0 #fff;
 
+    @media(max-width: 900px) {
+      font-size: 48px;
+      bottom: 10px;
+      right: -15px;
+    }
+
+    @media(max-width: 500px) {
+      width: calc(100% + 100px);
+      bottom: 30px;
+      right: -120px;
+      font-size: 40px;
+      max-width: none;
+    }
+
     span {
       display: block;
       width: 100%;
       margin-bottom: 5px;
       padding: 3px 6px;
+      background-color: #FFF;
       font-size: 10px;
       text-align: left;
       line-height: 1.4;
       letter-spacing: .25rem;
       text-transform: uppercase;
-      background-color: #FFF;
       font-style: normal;
+      text-shadow: none;
     }
   }
 
@@ -188,10 +200,21 @@ $symbol-height: 100px;
     max-width: 35%;
     font-size: 12px;
     padding: 3px 6px;
-    line-height: 1.4;
+    line-height: 1.5;
     letter-spacing: .05rem;
     background-color: #FFF;
     z-index: 2;
+
+    @media(max-width: 500px) {
+      width: 50%;
+      max-width: none;
+      left: 20%;
+      top: 50%;
+    }
+
+    @media(max-width: 500px) {
+      top: 40%;
+    }
   }
 
   &__transition-media {
@@ -199,7 +222,11 @@ $symbol-height: 100px;
     position: absolute;
     left: 10px;
     top: 10px;
-    width: 42%;
+    max-width: calc(100vw - 180px);
     min-height: 60vh;
+
+    @media(max-width: 900px) {
+      min-height: 0;
+    }
   }
 }

@@ -7,8 +7,9 @@ import './detailView.scss';
 
 /**
  * Renders the detail view of a single grid item
- * View data is retrieved from `streamData` using `activeId` (a <Route> prop)
+ * View data is retrieved from `streamData` using `chapterId` and `contentId` (<Route> props)
  * Prev/next item indexes are determined for use by the navigation buttons within `<Details>`
+ * Prev/next chapter indexes are determined for use by the navigation buttons within `<Details>`
  * Additionally, depending on the `lastLocation`, a transition class is added for CSS animation
  *
  * @param {object} props - props object
