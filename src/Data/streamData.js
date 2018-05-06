@@ -2,8 +2,10 @@ export default [
   // CHAPTER 1 (Red & Blue drawings)
   {
     meta: {
-      title: 'Red & Blue',
-      subtitle: 'subtitle test'
+      title: 'polarizing visions',
+      subtitle: 'subtitle test',
+      media: 'chapter-1-transition',
+      mediaType: '.gif'
     },
     content: [
       {
@@ -13,7 +15,7 @@ export default [
       },
       {
         image: "1st floor",
-        title: "1st floor",
+        title: "1st floor mezcal",
         subtitle: `just a cavity to soak up my guilt—the flowers wilting down so they can laugh at me`
       },
       {
@@ -32,13 +34,18 @@ export default [
         subtitle: `lorem ipsum it takes a while to figure out these subtitles, so lets not do it now`
       },
       {
+        image: "flying chrome",
+        title: "flying chrome",
+        subtitle: `lorem ipsum it takes a while to figure out these subtitles, so lets not do it now`
+      },
+      {
         image: "inscription",
         title: "inscription",
         subtitle: `lorem ipsum it takes a while to figure out these subtitles, so lets not do it now`
       },
       {
         image: "peace time",
-        title: "piece time",
+        title: "pieces of time",
         subtitle: `lorem ipsum it takes a while to figure out these subtitles, so lets not do it now`
       },
       {
@@ -49,11 +56,6 @@ export default [
       {
         image: "beetleborg",
         title: "beetleborg",
-        subtitle: `lorem ipsum it takes a while to figure out these subtitles, so lets not do it now`
-      },
-      {
-        image: "flying chrome",
-        title: "flying chrome",
         subtitle: `lorem ipsum it takes a while to figure out these subtitles, so lets not do it now`
       },
       {
