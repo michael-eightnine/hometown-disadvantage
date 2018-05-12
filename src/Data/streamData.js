@@ -3,7 +3,7 @@ export default [
   {
     meta: {
       title: 'polarizing visions',
-      subtitle: 'subtitle test',
+      subtitle: `vision splits apart around the 3rd balloon—told myself to always remember that moment n' it's clear today from march till may`,
       media: 'chapter-1-transition',
       mediaType: '.gif'
     },
@@ -16,67 +16,67 @@ export default [
       {
         image: "1st floor",
         title: "1st floor mezcal",
-        subtitle: `just a cavity to soak up my guilt—the flowers wilting down so they can laugh at me`
+        subtitle: `such heat in the pool right now—you took too much man, you took too much, too much. don't try and fight`
       },
       {
         image: "set drop",
         title: "set drop",
-        subtitle: `lorem ipsum it takes a while to figure out these subtitles, so lets not do it now`
+        subtitle: `the central memory of that time seems to hang on one or five or maybe forty nights—or very early mornings`
       },
       {
         image: "carry on 4 me",
         title: "carry on 4 me",
-        subtitle: `lorem ipsum it takes a while to figure out these subtitles, so lets not do it now`
+        subtitle: `walked my lady to the gallows n' he asked if I'd like to pull the lever myself`
       },
       {
-        image: "bought a rifle",
-        title: "bought a rifle",
-        subtitle: `lorem ipsum it takes a while to figure out these subtitles, so lets not do it now`
+        image: "portal bug",
+        title: "interior sights",
+        subtitle: `still bit like the back of a hand—hard to swallow n' it stays much longer`
       },
       {
         image: "flying chrome",
         title: "flying chrome",
-        subtitle: `lorem ipsum it takes a while to figure out these subtitles, so lets not do it now`
+        subtitle: `two room shotgun house hiding dark in tides, hot knives pressed against the heart`
       },
       {
         image: "inscription",
         title: "inscription",
-        subtitle: `lorem ipsum it takes a while to figure out these subtitles, so lets not do it now`
+        subtitle: `bent thumbs dig back in my sockets—nothing worth seeing, I'd rather be dumb`
       },
       {
         image: "peace time",
-        title: "pieces of time",
-        subtitle: `lorem ipsum it takes a while to figure out these subtitles, so lets not do it now`
+        title: "peace time",
+        subtitle: `I guess I am always, it's not a problem—it's just something, I got used to it`
       },
       {
         image: "inscription2",
-        title: "inscription2",
-        subtitle: `lorem ipsum it takes a while to figure out these subtitles, so lets not do it now`
+        title: "organ",
+        subtitle: `reached down n' it stuck, both cried it'd be such a shame if she touched my heart`
+      },
+      {
+        image: "bought a rifle",
+        title: "bought a rifle",
+        subtitle: `we're all wired into a survival trip now, our loss and their failures too—a generation of permanent cripples`
       },
       {
         image: "beetleborg",
-        title: "beetleborg",
-        subtitle: `lorem ipsum it takes a while to figure out these subtitles, so lets not do it now`
-      },
-      {
-        image: "portal bug",
-        title: "portal bug",
-        subtitle: `lorem ipsum it takes a while to figure out these subtitles, so lets not do it now`
+        title: "betelgeuse",
+        subtitle: `are we halfway to heaven? are we halfway to hell? and... how long is this gonna last?`
       },
       {
         image: "standing water",
         title: "standing water",
-        subtitle: `lorem ipsum it takes a while to figure out these subtitles, so lets not do it now`
+        subtitle: `and darling I fell for you, can't you tell? no? lovely it's lovely`
       },
       {
         image: "its urs",
-        title: "its urs",
-        subtitle: `lorem ipsum it takes a while to figure out these subtitles, so lets not do it now`
+        title: "yours 4ever",
+        subtitle: `heat runs down and it took so long to give up n' give, so let's not do it now`
       },
       {
         image: "flower cycle",
         title: "flower cycle",
-        subtitle: `lorem ipsum it takes a while to figure out these subtitles, so lets not do it now`
+        subtitle: `remain remain, gone off again n' (remain remain) it's still the end`
       }
     ]
   },

@@ -68,7 +68,7 @@ class Details extends Component {
     if(transitionState) {
       setTimeout(() => {
         this.updateTransitionState(false)
-      }, 7500)
+      }, 8250)
     }
   }
 
