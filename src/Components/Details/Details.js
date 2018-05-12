@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Swipeable from 'react-swipeable';
 import { withRouter } from 'react-router-dom';
 import { IMAGE_CONTENT_PATH } from 'Data/constants';
-import streamContent from 'Data/streamData'
+import streamContent from 'Data/streamData';
 import { DetailsTransition } from './';
 import './details.scss';
 
@@ -31,17 +31,17 @@ class Details extends Component {
     super();
     this.state = {
       transitionActive: false
-    }
+    };
   }
 
   // Attach keypress event listener on mount
   componentWillMount() {
-    window.addEventListener('keydown', this.handleKeyPress)
+    window.addEventListener('keydown', this.handleKeyPress);
   }
 
   // Unbind keypress event listener on unmount
   componentWillUnmount() {
-    window.removeEventListener('keydown', this.handleKeyPress)
+    window.removeEventListener('keydown', this.handleKeyPress);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -50,7 +50,7 @@ class Details extends Component {
       return;
     }
     // Otherwise the chapter has changed, and time to initiate transition changes
-    this.updateTransitionState(true)
+    this.updateTransitionState(true);
   }
 
   /**
@@ -61,14 +61,14 @@ class Details extends Component {
    *
    * @param {boolean} transitionState - are we actively transitioning chapters?
    */
-  updateTransitionState = (transitionState) => {
+  updateTransitionState = transitionState => {
     this.setState({ transitionActive: transitionState });
 
     // If it was set to true, reset after a timeout
     if(transitionState) {
       setTimeout(() => {
-        this.updateTransitionState(false)
-      }, 8250)
+        this.updateTransitionState(false);
+      }, 8250);
     }
   }
 
@@ -81,7 +81,7 @@ class Details extends Component {
    *
    * @param {string} direction - is this going to 'prev' or 'next'?
    */
-  handleRouteChange = (direction) => {
+  handleRouteChange = direction => {
     // If we have a chapter transition active, do not redirect the route
     if (this.state.transitionActive) return;
 
@@ -109,7 +109,7 @@ class Details extends Component {
           // If at the chapter end, go to the next chapter's first item
           ? `/content-stream/${nextChapter}/0`
           // Otherwise just go to the next item
-          : `/content-stream/${chapter}/${nextItem}`
+          : `/content-stream/${chapter}/${nextItem}`;
         break;
       case 'prev':
         newRoute = atChapterStart
@@ -117,11 +117,11 @@ class Details extends Component {
           // this restarts the previous chapter, since we're moving backwards
           ? `/content-stream/${nextChapter}/0`
           // Otherwise just go to the previous item
-          : `/content-stream/${chapter}/${prevItem}`
+          : `/content-stream/${chapter}/${prevItem}`;
         break;
       default:
-        newRoute = '/content-stream/0'
-    };
+        newRoute = '/content-stream/0';
+    }
     history.push(newRoute);
   }
 
@@ -130,7 +130,7 @@ class Details extends Component {
    *
    * @param {object} e - the keypress event object
    */
-  handleKeyPress = (e) => {
+  handleKeyPress = e => {
     const key = e.key || e.keyCode;
     const { history, chapter } = this.props;
 
@@ -163,7 +163,7 @@ class Details extends Component {
         history.push(`/content-stream/${chapter}`);
         break;
       }
-      default: return
+      default: return;
     }
   }
 
@@ -234,9 +234,9 @@ class Details extends Component {
           </div>
         </div>
       </Swipeable>
-    )
+    );
   }
-};
+}
 
 Details.propTypes = {
   item: PropTypes.shape({

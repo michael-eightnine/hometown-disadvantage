@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
 class GridControls extends Component {
-  handleChapterChange = (direction) => {
+  handleChapterChange = direction => {
     const {
       chapter,
       chapterMax,
@@ -18,14 +18,14 @@ class GridControls extends Component {
     let newRoute;
     switch (direction) {
       case 'next':
-        newRoute = `/content-stream/${chapter + 1}`
+        newRoute = `/content-stream/${chapter + 1}`;
         break;
       case 'prev':
-        newRoute = `/content-stream/${chapter - 1}`
+        newRoute = `/content-stream/${chapter - 1}`;
         break;
       default:
-        newRoute = '/content-stream/0'
-    };
+        newRoute = '/content-stream/0';
+    }
     history.push(newRoute);
   }
 
@@ -54,7 +54,7 @@ class GridControls extends Component {
           </span>
         </div>
       </div>
-    )
+    );
   }
 }
 

@@ -44,7 +44,7 @@ const DetailsTransition = ({
       }
     </div>
   );
-}
+};
 
 DetailsTransition.defaultProps = {
   mediaType: '.jpg'

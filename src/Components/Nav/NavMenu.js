@@ -19,11 +19,9 @@ const NavMenu = () => {
     ? 'nav--is-splash'
     : '';
 
-  // By default the current chapter is 0 (first chapter)
-  let currentChapter = 0;
-
   // Get the current chapter from the pathname
-  currentChapter = getChapterFromPath(pathname);
+  // If no chapter is present, defaults to 0 (first chapter)
+  const currentChapter = getChapterFromPath(pathname);
 
   return (
     <nav className={`nav ${navClass}`}>
@@ -48,7 +46,7 @@ const NavMenu = () => {
         </li>
       </ul>
     </nav>
-  )
+  );
 };
 
 export default NavMenu;

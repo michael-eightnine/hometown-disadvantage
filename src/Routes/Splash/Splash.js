@@ -17,7 +17,7 @@ class Splash extends Component {
     super();
     this.state = {
       prepareRedirect: false
-    }
+    };
   }
 
   /**
@@ -31,11 +31,11 @@ class Splash extends Component {
     setTimeout(() => {
       this.setState({
         prepareRedirect: true
-      })
-    }, 1000)
+      });
+    }, 1000);
     setTimeout(() => {
       this.props.history.push('/content-stream/0/0');
-    }, 3000)
+    }, 3000);
   }
 
   render() {

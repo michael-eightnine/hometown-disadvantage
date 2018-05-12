@@ -48,7 +48,7 @@ const DetailView = ({ chapterId, contentId, lastLocation }) => {
         nextChapter={nextChapter}
       />
     </section>
-  )
+  );
 };
 
 DetailView.propTypes = {

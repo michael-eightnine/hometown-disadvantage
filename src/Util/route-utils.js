@@ -16,7 +16,7 @@ export const validateDetailRoute = (chapterId, contentId, maxChapter, maxContent
   const withinRange = chapter <= maxChapter && content <= maxContent;
   if (!validIds || !withinRange) return false;
   return true;
-}
+};
 
 /**
  * Validate Detail Route
@@ -33,7 +33,7 @@ export const validateStreamRoute = (chapterId, maxChapter) => {
   const withinRange = chapter <= maxChapter;
   if (!validId || !withinRange) return false;
   return true;
-}
+};
 
 /**
  * Get Chapter From Path
@@ -44,7 +44,7 @@ export const validateStreamRoute = (chapterId, maxChapter) => {
  *
  * @returns {number} - the index of the active chapter, or 0 if none is found
  */
-export const getChapterFromPath = (pathname) => {
+export const getChapterFromPath = pathname => {
   if (pathname.includes('/content-stream/')) {
     const start = pathname.indexOf('/content-stream/') + '/content-stream/'.length;
     const end = start + 1;
