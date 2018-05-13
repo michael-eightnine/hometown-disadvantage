@@ -6,6 +6,12 @@ Reborn yet again, Hometown Advantage is now The Hometown [dis]Advantage. Brand n
 
 ---
 
+** Current Chapters **
+1. Polarizing Visions
+2. Lowlight & Dark Times
+
+---
+
 _Under the hood (for those who care):_
 - React 16
 - React Router 4
