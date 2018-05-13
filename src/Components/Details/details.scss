@@ -87,7 +87,7 @@ $symbol-height: 100px;
 
       @media(max-width: 500px) {
         bottom: 27%;
-        right: calc(-80px);
+        right: calc(-50px);
       }
     }
   }
@@ -171,9 +171,9 @@ $symbol-height: 100px;
 
     @media(max-width: 500px) {
       width: calc(100% + 100px);
-      bottom: 30px;
+      bottom: 10%;
       right: -120px;
-      font-size: 40px;
+      font-size: 36px;
       max-width: none;
     }
 
@@ -213,7 +213,7 @@ $symbol-height: 100px;
     }
 
     @media(max-width: 500px) {
-      top: 40%;
+      top: 35%;
     }
   }
 
