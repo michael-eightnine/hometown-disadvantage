@@ -35,7 +35,8 @@ const DetailsTransition = ({
         {title}
       </h1>
       <p className="details__transition-subtitle">{subtitle}</p>
-      {media &&
+      {/* Only display the media content if media is provided and the transition is visible */}
+      {media && isActive &&
         <img
           className="details__transition-media"
           src={`${IMAGE_CONTENT_PATH}${media}${mediaType}`}
