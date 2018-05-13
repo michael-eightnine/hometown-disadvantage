@@ -3,11 +3,16 @@ export default [
   {
     meta: {
       title: 'polarizing visions',
-      subtitle: `vision splits apart around the 3rd balloon—told myself to always remember that moment n' it's clear today from march till may`,
+      subtitle: `vision splits apart around the 3rd balloon—told myself to always remember that moment n' it's clear today from march till tomorrow`,
       media: 'chapter-1-transition',
       mediaType: '.gif'
     },
     content: [
+      {
+        image: "change w me",
+        title: "change w/ me",
+        subtitle: `you are seven years old. you are a man. bury your first toy and your mother's picture`
+      },
       {
         image: "1st floor",
         title: "1st floor mezcal",
