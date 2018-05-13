@@ -37,7 +37,7 @@ const AppLayout = () => (
                 if (isValidPath)
                   return <StreamView chapterId={Number(chapterId)} />;
                 // Otherwise, return to the first chapter of the content stream
-                return <Redirect to="/content-stream/0" /> ;
+                return <Redirect to="/content-stream/0" />;
               }}
             />
             {/* Detail View with logic */}
@@ -51,7 +51,7 @@ const AppLayout = () => (
                 if (isValidPath)
                   return <DetailView chapterId={Number(chapterId)} contentId={Number(contentId)} />;
                 // Otherwise, return to the first chapter of the content stream
-                return <Redirect to="/content-stream/0" /> ;
+                return <Redirect to="/content-stream/0" />;
               }}
             />
             {/* Fallback Route, redirect to splash on unknown route */}

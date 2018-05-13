@@ -9,14 +9,14 @@ export default [
     },
     content: [
       {
-        image: "goodbye vase",
-        title: "grave (within a)",
-        subtitle: `just a cavity to soak up my guilt—and the flowers wilting down so they can laugh at me`
-      },
-      {
         image: "1st floor",
         title: "1st floor mezcal",
         subtitle: `such heat in the pool right now—you took too much man, you took too much, too much. don't try and fight`
+      },
+      {
+        image: "goodbye vase",
+        title: "grave (within a)",
+        subtitle: `just a cavity to soak up my guilt—and the flowers wilting down so they can laugh at me`
       },
       {
         image: "set drop",
