@@ -9,7 +9,8 @@ import { IMAGE_CONTENT_PATH } from 'Data/constants';
  *
  * @param {object} props - props object
  * @param {string} props.image - filename for the image to show
- * @param {number} props.to - index of this item in the items array
+ * @param {number} props.to - string composed of `${chapter}/${itemIndex}` that opens
+ *                            the detail view for the clicked grid item
  *
  * @returns {Component} - GridItem component
  */
@@ -23,7 +24,7 @@ const GridItem = ({ image, to }) => (
 
 GridItem.propTypes = {
   image: PropTypes.string.isRequired,
-  to: PropTypes.number.isRequired
+  to: PropTypes.string.isRequired
 };
 
 export default GridItem;

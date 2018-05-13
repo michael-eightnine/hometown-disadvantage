@@ -12,7 +12,7 @@ body {
 
 .app-container {
   display: flex;
-  flew-flow: row nowrap;
+  flex-flow: row nowrap;
   align-content: stretch;
   background-color: #fff;
 }
@@ -35,8 +35,8 @@ body {
   padding: $app-padding 0 $app-padding $app-padding;
 
   @media(max-width: 900px) {
-    padding: 20px;
     width: calc(100% - 150px);
+    padding: 20px;
   }
 
   @media(max-width: 500px) {
@@ -45,13 +45,20 @@ body {
 }
 
 .standard-link {
-  text-decoration: underline;
   padding: 5px;
   color: #000;
   background-color: #fff;
+  text-decoration: underline;
+  cursor: pointer;
 
   &:hover {
     color: #fff;
     background-color: #000;
+  }
+
+  &[disabled] {
+    text-decoration: line-through;
+    pointer-events: none;
+    cursor: normal;
   }
 }

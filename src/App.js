@@ -4,6 +4,6 @@ import AppLayout from 'Components/AppLayout';
 
 const App = () => (
   <AppLayout />
-)
+);
 
 export default App;

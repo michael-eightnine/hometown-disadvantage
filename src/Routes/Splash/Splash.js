@@ -17,7 +17,7 @@ class Splash extends Component {
     super();
     this.state = {
       prepareRedirect: false
-    }
+    };
   }
 
   /**
@@ -31,16 +31,16 @@ class Splash extends Component {
     setTimeout(() => {
       this.setState({
         prepareRedirect: true
-      })
-    }, 1000)
+      });
+    }, 1000);
     setTimeout(() => {
-      this.props.history.push('/content-stream/0');
-    }, 3000)
+      this.props.history.push('/content-stream/0/0');
+    }, 3000);
   }
 
   render() {
     const { prepareRedirect } = this.state;
-    const featureImage = `${IMAGE_CONTENT_PATH}${streamData[0].image}.svg`;
+    const featureImage = `${IMAGE_CONTENT_PATH}${streamData[0].content[0].image}.svg`;
     const imageClass = prepareRedirect
       ? 'splash__animate'
       : '';

@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from 'Svg/logo-stacked-thin.svg';
+import { getChapterFromPath } from 'Util';
 import './nav.scss';
 
 /**
@@ -13,9 +14,14 @@ import './nav.scss';
 const NavMenu = () => {
   // This component exists outside of the Router's `<Switch>` case
   // So window.location.pathname is used instead of `withRouter` props
-  const navClass = window.location.pathname === '/'
+  const { location: { pathname } } = window;
+  const navClass = pathname === '/'
     ? 'nav--is-splash'
     : '';
+
+  // Get the current chapter from the pathname
+  // If no chapter is present, defaults to 0 (first chapter)
+  const currentChapter = getChapterFromPath(pathname);
 
   return (
     <nav className={`nav ${navClass}`}>
@@ -24,7 +30,7 @@ const NavMenu = () => {
         <li className="nav__link">
           <NavLink
             exact
-            to="/content-stream"
+            to={`/content-stream/${currentChapter}`}
             activeClassName="nav-link--active"
           >
             See-It-All
@@ -40,7 +46,7 @@ const NavMenu = () => {
         </li>
       </ul>
     </nav>
-  )
+  );
 };
 
 export default NavMenu;

@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "module": "es6",
+        "target": "ES6",
+        "baseUrl": ".",
+        "paths": {
+            "Components/*": ["./src/Components/*"],
+            "Routes/*": ["./src/Routes/*"],
+            "Svg/*": ["./src/svg/*"],
+            "Data/*": ["./src/Data/*"],
+            "Util/*": ["./src/Util/*"],
+        }
+    },
+    "exclude": [
+        "node_modules",
+        "config",
+        "build",
+        "public",
+        "scripts"
+    ]
+}
