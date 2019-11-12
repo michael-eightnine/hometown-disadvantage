@@ -9,7 +9,12 @@
  *
  * @returns {boolean} - is this a valid detail route?
  */
-export const validateDetailRoute = (chapterId, contentId, maxChapter, maxContent) => {
+export const validateDetailRoute = (
+  chapterId,
+  contentId,
+  maxChapter,
+  maxContent
+) => {
   const chapter = Number(chapterId);
   const content = Number(contentId);
   const validIds = typeof chapter === 'number' && typeof content === 'number';
@@ -46,7 +51,8 @@ export const validateStreamRoute = (chapterId, maxChapter) => {
  */
 export const getChapterFromPath = pathname => {
   if (pathname.includes('/content-stream/')) {
-    const start = pathname.indexOf('/content-stream/') + '/content-stream/'.length;
+    const start =
+      pathname.indexOf('/content-stream/') + '/content-stream/'.length;
     const end = start + 1;
     return pathname.slice(start, end);
   }

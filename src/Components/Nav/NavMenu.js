@@ -1,8 +1,8 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import logo from "Svg/logo-stacked-thin.svg";
-import { getChapterFromPath } from "Util";
-import "./nav.scss";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import logo from 'Svg/logo-stacked-thin.svg';
+import { getChapterFromPath } from 'Util';
+import './nav.scss';
 
 /**
  * Nav Menu component
@@ -17,7 +17,7 @@ const NavMenu = () => {
   const {
     location: { pathname }
   } = window;
-  const navClass = pathname === "/" ? "nav--is-splash" : "";
+  const navClass = pathname === '/' ? 'nav--is-splash' : '';
 
   // Get the current chapter from the pathname
   // If no chapter is present, defaults to 0 (first chapter)

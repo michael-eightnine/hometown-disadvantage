@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
   Switch,
   Redirect
-} from "react-router-dom";
-import { LastLocationProvider } from "react-router-last-location";
-import { SplashView, StreamView, AboutView, DetailView } from "Routes";
-import { Nav } from "Components/Nav";
-import { streamData } from "Data";
-import { validateDetailRoute, validateStreamRoute } from "Util";
+} from 'react-router-dom';
+import { LastLocationProvider } from 'react-router-last-location';
+import { SplashView, StreamView, AboutView, DetailView } from 'Routes';
+import { Nav } from 'Components/Nav';
+import { streamData } from 'Data';
+import { validateDetailRoute, validateStreamRoute } from 'Util';
 
 const AppLayout = () => (
   <Router>

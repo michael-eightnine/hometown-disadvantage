@@ -19,11 +19,7 @@ const Grid = ({ chapter, chapterMax, chapterTitle, items }) => (
   <section className="grid">
     <div className="grid__list">
       {items.map((item, i) => (
-        <GridItem
-          key={item.image}
-          image={item.image}
-          to={`${chapter}/${i}`}
-        />
+        <GridItem key={item.image} image={item.image} to={`${chapter}/${i}`} />
       ))}
     </div>
     <GridControls

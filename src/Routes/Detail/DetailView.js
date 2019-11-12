@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { withLastLocation } from "react-router-last-location";
-import { Details } from "Components/Details";
-import { streamData } from "Data";
-import "./detailView.scss";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withLastLocation } from 'react-router-last-location';
+import { Details } from 'Components/Details';
+import { streamData } from 'Data';
+import './detailView.scss';
 
 /**
  * Renders the detail view of a single grid item
@@ -20,12 +20,12 @@ import "./detailView.scss";
  * @returns {ReactComponent} - Detail View top-level route component
  */
 const DetailView = ({ chapterId, contentId, lastLocation }) => {
-  let sectionClass = "view view__stream";
+  let sectionClass = 'view view__stream';
   if (lastLocation) {
     sectionClass =
-      lastLocation.pathname === "/"
-        ? "view view__detail view__detail--fade-in"
-        : "view view__detail";
+      lastLocation.pathname === '/'
+        ? 'view view__detail view__detail--fade-in'
+        : 'view view__detail';
   }
 
   // Determine chapter content

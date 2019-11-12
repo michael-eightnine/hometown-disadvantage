@@ -1,6 +1,6 @@
-import React from "react";
-import map from "Svg/hta-map.svg";
-import "./aboutView.scss";
+import React from 'react';
+import map from 'Svg/hta-map.svg';
+import './aboutView.scss';
 
 const AboutView = () => (
   <section className="view view__about">
