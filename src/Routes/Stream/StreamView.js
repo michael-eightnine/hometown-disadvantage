@@ -13,11 +13,16 @@ import { streamData } from "Data";
  * @returns {ReactComponent} - Content Stream top-level route component
  */
 const StreamView = ({ chapterId }) => (
-  <section className="view view__stream">
+  <section
+  className="view view__stream"
+  >
     <Grid
+
+
+
       chapter={chapterId}
       chapterMax={streamData.length - 1}
-      chapterTitle={streamData[chapterId].meta.title}
+      chapterTitle={ streamData[chapterId].meta.title    }
       items={streamData[chapterId].content}
     />
   </section>
