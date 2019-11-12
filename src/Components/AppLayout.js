@@ -1,20 +1,15 @@
-import React from 'react';
+import React from "react";
 import {
   BrowserRouter as Router,
   Route,
   Switch,
   Redirect
-} from 'react-router-dom';
-import { LastLocationProvider } from 'react-router-last-location';
-import {
-  SplashView,
-  StreamView,
-  AboutView,
-  DetailView
-} from 'Routes';
-import { Nav } from 'Components/Nav';
-import streamData from 'Data/streamData';
-import { validateDetailRoute, validateStreamRoute } from 'Util';
+} from "react-router-dom";
+import { LastLocationProvider } from "react-router-last-location";
+import { SplashView, StreamView, AboutView, DetailView } from "Routes";
+import { Nav } from "Components/Nav";
+import { streamData } from "Data";
+import { validateDetailRoute, validateStreamRoute } from "Util";
 
 const AppLayout = () => (
   <Router>
@@ -30,7 +25,11 @@ const AppLayout = () => (
             <Route
               exact
               path="/content-stream/:chapterId"
-              render={({ match: { params: { chapterId } } }) => {
+              render={({
+                match: {
+                  params: { chapterId }
+                }
+              }) => {
                 const maxChapter = streamData.length - 1;
                 const isValidPath = validateStreamRoute(chapterId, maxChapter);
                 // If the chapter ID is valid, return that chapter view of the content stream
@@ -42,23 +41,34 @@ const AppLayout = () => (
             />
             {/* Detail View with logic */}
             <Route
-              path='/content-stream/:chapterId/:contentId'
-              render={({ match: { params: { chapterId, contentId } } }) => {
+              path="/content-stream/:chapterId/:contentId"
+              render={({
+                match: {
+                  params: { chapterId, contentId }
+                }
+              }) => {
                 const maxChapter = streamData.length - 1;
                 const maxContent = streamData[chapterId].content.length - 1;
-                const isValidPath = validateDetailRoute(chapterId, contentId, maxChapter, maxContent);
+                const isValidPath = validateDetailRoute(
+                  chapterId,
+                  contentId,
+                  maxChapter,
+                  maxContent
+                );
                 // If we have a valid path, return the detail view for that path
                 if (isValidPath)
-                  return <DetailView chapterId={Number(chapterId)} contentId={Number(contentId)} />;
+                  return (
+                    <DetailView
+                      chapterId={Number(chapterId)}
+                      contentId={Number(contentId)}
+                    />
+                  );
                 // Otherwise, return to the first chapter of the content stream
                 return <Redirect to="/content-stream/0" />;
               }}
             />
             {/* Fallback Route, redirect to splash on unknown route */}
-            <Route
-              path='/'
-              render={() => <Redirect to='/' />}
-            />
+            <Route path="/" render={() => <Redirect to="/" />} />
           </Switch>
         </main>
         <Nav />

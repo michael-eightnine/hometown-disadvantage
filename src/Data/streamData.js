@@ -1,11 +1,160 @@
 export default [
-  // CHAPTER 1 (Red & Blue drawings)
+  // CHAPTER 1 (Frame drawings)
   {
     meta: {
-      title: 'polarizing visions',
+      title: "tarot prophecies",
+      subtitle: `this is just some demo texxxxt`,
+      media: "null",
+      mediaType: ".gif"
+    },
+    content: [
+      {
+        image: "bell-of-awakening",
+        title: "example title..",
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: "kitana",
+        title: "example title..",
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: "sacrifice",
+        title: "example title..",
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: "born-star",
+        title: "example title..",
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: "main-stage",
+        title: "example title..",
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: "scorpion-king",
+        title: "example title..",
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: "cemetery-sky",
+        title: "example title..",
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: "mans-ruin",
+        title: "example title..",
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: "show-lights",
+        title: "example title..",
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: "halloween-garden",
+        title: "example title..",
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: "night-watch",
+        title: "example title..",
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: "slot-machine",
+        title: "example title..",
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: "hellraiser",
+        title: "example title..",
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: "no-mans-land",
+        title: "example title..",
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: "sun-sets",
+        title: "example title..",
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: "homestead",
+        title: "example title..",
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: "old-school",
+        title: "example title..",
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: "trapdoor",
+        title: "example title..",
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: "hotknive",
+        title: "example title..",
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: "punishment",
+        title: "example title..",
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: "western-depression",
+        title: "example title..",
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: "inner-garden",
+        title: "example title..",
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: "pursuit-special",
+        title: "example title..",
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      }
+    ]
+  },
+  // CHAPTER 2 (Red & Blue drawings)
+  {
+    meta: {
+      title: "polarizing visions",
       subtitle: `vision splits apart around the 3rd balloon—told myself to always remember that moment n' it's clear today from march till tomorrow`,
-      media: 'chapter-1-transition',
-      mediaType: '.gif'
+      media: "chapter-2-transition",
+      mediaType: ".gif"
     },
     content: [
       {
@@ -85,13 +234,13 @@ export default [
       }
     ]
   },
-  // CHAPTER 2 (Black lined drawings)
+  // CHAPTER 3 (Black lined drawings)
   {
     meta: {
-      title: 'lowlight & dark times',
+      title: "lowlight & dark times",
       subtitle: `december 2 march about the coldest months—inside diggin the grave n' outside mercedes mercedes. found em right around 5 feet down`,
-      media: 'chapter-2-transition',
-      mediaType: '.gif'
+      media: "chapter-3-transition",
+      mediaType: ".gif"
     },
     content: [
       {
@@ -107,27 +256,32 @@ export default [
       {
         image: "cheree",
         title: "cheree cheree",
-        subtitle: "teardrops on me, myself, I always thought you were pretty in a red dress"
+        subtitle:
+          "teardrops on me, myself, I always thought you were pretty in a red dress"
       },
       {
         image: "cross2bear",
         title: "snake oil",
-        subtitle: '"her shoulders were as white as marble", n the marble holds her still'
+        subtitle:
+          '"her shoulders were as white as marble", n the marble holds her still'
       },
       {
         image: "im yr dog",
-        title: 'ich lüge',
-        subtitle: "I've been crazy for this boy I really like his gun—I've got nowhere to run"
+        title: "ich lüge",
+        subtitle:
+          "I've been crazy for this boy I really like his gun—I've got nowhere to run"
       },
       {
         image: "left my heart alone",
         title: "glasshouse",
-        subtitle: "buried my heart inna wounded creek last time I saw my baby n I ain't seen it since"
+        subtitle:
+          "buried my heart inna wounded creek last time I saw my baby n I ain't seen it since"
       },
       {
         image: "letter from the sea",
         title: "deep2",
-        subtitle: "set one's heart on, be dying for—sent the letter from the sea"
+        subtitle:
+          "set one's heart on, be dying for—sent the letter from the sea"
       },
       {
         image: "walled garden",
@@ -137,62 +291,74 @@ export default [
       {
         image: "snake eights",
         title: "oregon vice",
-        subtitle: "out at the tracks won't someone tell her father how much we miss her"
+        subtitle:
+          "out at the tracks won't someone tell her father how much we miss her"
       },
       {
         image: "soupbowl",
         title: "been out",
-        subtitle: "traditional combination, less than the three but don't be scared—gets you right anyway"
+        subtitle:
+          "traditional combination, less than the three but don't be scared—gets you right anyway"
       },
       {
         image: "heirloom",
         title: "heir(s)",
-        subtitle: "the only living person who even calls me (you can't live on memories alone)"
+        subtitle:
+          "the only living person who even calls me (you can't live on memories alone)"
       },
       {
         image: "yea lime",
         title: "estereo",
-        subtitle: "sometimes I get so drunk it's all I feel, or rewards for waking up"
+        subtitle:
+          "sometimes I get so drunk it's all I feel, or rewards for waking up"
       },
       {
         image: "army man",
         title: "decrease yr options",
-        subtitle: "illegally leaving the armed forces (her mother's desertion of her family)"
+        subtitle:
+          "illegally leaving the armed forces (her mother's desertion of her family)"
       },
       {
         image: "corner pocket",
         title: "$90 layup",
-        subtitle: "possible answers are affirmative, five are negative, and five are non-committal"
+        subtitle:
+          "possible answers are affirmative, five are negative, and five are non-committal"
       },
       {
         image: "coughinnails",
         title: "french tips",
-        subtitle: "why don't you just come back to us? (I don't think I can get it out of me anymore)"
+        subtitle:
+          "why don't you just come back to us? (I don't think I can get it out of me anymore)"
       },
       {
         image: "urn",
         title: "nightvision",
-        subtitle: "why the barbed wire? Do they climb in at night? No, they climb out."
+        subtitle:
+          "why the barbed wire? Do they climb in at night? No, they climb out."
       },
       {
         image: "waterfall",
         title: "premonition",
-        subtitle: "(looking disturbed) I don't think we survived that crash—how'd you guess?"
+        subtitle:
+          "(looking disturbed) I don't think we survived that crash—how'd you guess?"
       },
       {
         image: "tears",
         title: "do svidaniya",
-        subtitle: "pull or rip (something) apart or to pieces with force (to produce tears)"
+        subtitle:
+          "pull or rip (something) apart or to pieces with force (to produce tears)"
       },
       {
         image: "koolaid",
         title: "x-ray",
-        subtitle: "deeper than the blood I'm submerged in, black checkered floor with the red velvet curtain"
+        subtitle:
+          "deeper than the blood I'm submerged in, black checkered floor with the red velvet curtain"
       },
       {
         image: "fish soup",
         title: "fish soup",
-        subtitle: "partook in the ritual (never even noticed) till I realized a pause in the decay"
+        subtitle:
+          "partook in the ritual (never even noticed) till I realized a pause in the decay"
       },
       {
         image: "red vase",

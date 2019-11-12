@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IMAGE_CONTENT_PATH } from 'Data/constants';
+import { IMAGE_CONTENT_PATH } from 'Data';
 
 /**
  * Details Transition

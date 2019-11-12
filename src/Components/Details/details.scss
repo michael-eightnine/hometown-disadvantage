@@ -142,6 +142,10 @@ $symbol-height: 100px;
       width: calc(100vw - 150px);
     }
 
+    @media(max-width: 500px) {
+      height: calc(100vh - 80px);
+    }
+
     &--hidden {
       opacity: 0;
       pointer-events: none;

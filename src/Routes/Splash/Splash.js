@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
-import streamData from 'Data/streamData';
-import { IMAGE_CONTENT_PATH } from 'Data/constants';
-import logo from 'Svg/logo-horizontal.svg';
-import './splash.scss';
+import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
+import { IMAGE_CONTENT_PATH, streamData } from "Data";
+import logo from "Svg/logo-horizontal.svg";
+import "./splash.scss";
 
 /**
  * Renders the Splash view top-level route component
@@ -13,12 +12,7 @@ import './splash.scss';
  * @returns {ReactComponent} - Splash top-level route component
  */
 class Splash extends Component {
-  constructor() {
-    super();
-    this.state = {
-      prepareRedirect: false
-    };
-  }
+  state = { prepareRedirect: false };
 
   /**
    * On mount, wait 1 second and then set `prepareRedirect` to `true`
@@ -34,16 +28,14 @@ class Splash extends Component {
       });
     }, 1000);
     setTimeout(() => {
-      this.props.history.push('/content-stream/0/0');
+      this.props.history.push("/content-stream/0/0");
     }, 3000);
   }
 
   render() {
     const { prepareRedirect } = this.state;
     const featureImage = `${IMAGE_CONTENT_PATH}${streamData[0].content[0].image}.svg`;
-    const imageClass = prepareRedirect
-      ? 'splash__animate'
-      : '';
+    const imageClass = prepareRedirect ? "splash__animate" : "";
 
     return (
       <section className="view view__splash">

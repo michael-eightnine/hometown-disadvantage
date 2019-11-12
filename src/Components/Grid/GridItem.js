@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { IMAGE_CONTENT_PATH } from 'Data/constants';
+import { IMAGE_CONTENT_PATH } from 'Data';
 
 /**
  * Renders a single grid item, which is wrapped in a <Link /> to

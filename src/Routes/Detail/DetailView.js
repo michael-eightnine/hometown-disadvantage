@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withLastLocation } from 'react-router-last-location';
-import { Details } from 'Components/Details';
-import streamContent from 'Data/streamData';
-import './detailView.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import { withLastLocation } from "react-router-last-location";
+import { Details } from "Components/Details";
+import { streamData } from "Data";
+import "./detailView.scss";
 
 /**
  * Renders the detail view of a single grid item
@@ -20,17 +20,16 @@ import './detailView.scss';
  * @returns {ReactComponent} - Detail View top-level route component
  */
 const DetailView = ({ chapterId, contentId, lastLocation }) => {
-  let sectionClass = 'view view__stream';
+  let sectionClass = "view view__stream";
   if (lastLocation) {
-    sectionClass = lastLocation.pathname === '/'
-      ? 'view view__detail view__detail--fade-in'
-      : 'view view__detail';
+    sectionClass =
+      lastLocation.pathname === "/"
+        ? "view view__detail view__detail--fade-in"
+        : "view view__detail";
   }
 
-  // Determine chapter count, next chapter, and chapter count
-  const chapterCount = streamContent.length - 1;
-  const nextChapter = chapterId === chapterCount ? 0 : chapterId + 1;
-  const chapterContent = streamContent[chapterId].content;
+  // Determine chapter content
+  const chapterContent = streamData[chapterId].content;
   // Determine item count, next item, and previous item
   const count = chapterContent.length - 1;
   const nextItem = contentId === count ? 0 : contentId + 1;
@@ -45,7 +44,6 @@ const DetailView = ({ chapterId, contentId, lastLocation }) => {
         prevItem={prevItem}
         nextItem={nextItem}
         chapter={chapterId}
-        nextChapter={nextChapter}
       />
     </section>
   );
