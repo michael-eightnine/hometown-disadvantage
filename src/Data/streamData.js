@@ -2,93 +2,39 @@ export default [
   // CHAPTER 1 (Frame drawings)
   {
     meta: {
-      title: 'tarot prophecies',
-      subtitle: `this is just some demo texxxxt`,
-      media: 'null',
+      title: 'prayer card vendor',
+      subtitle: `aiding in: unhappiness, release of fear, insomnia, mysteries unveiled... a gift to die where you're from`,
+      media: 'chapter-1-transition',
       mediaType: '.gif'
     },
     content: [
       {
-        image: 'bell-of-awakening',
-        title: 'example title..',
+        image: 'punishment',
+        title: 'tristezza',
         subtitle:
-          "you are seven years old. you are a man. bury your first toy and your mother's picture"
-      },
-      {
-        image: 'kitana',
-        title: 'example title..',
-        subtitle:
-          "you are seven years old. you are a man. bury your first toy and your mother's picture"
-      },
-      {
-        image: 'sacrifice',
-        title: 'example title..',
-        subtitle:
-          "you are seven years old. you are a man. bury your first toy and your mother's picture"
-      },
-      {
-        image: 'born-star',
-        title: 'example title..',
-        subtitle:
-          "you are seven years old. you are a man. bury your first toy and your mother's picture"
-      },
-      {
-        image: 'main-stage',
-        title: 'example title..',
-        subtitle:
-          "you are seven years old. you are a man. bury your first toy and your mother's picture"
-      },
-      {
-        image: 'scorpion-king',
-        title: 'example title..',
-        subtitle:
-          "you are seven years old. you are a man. bury your first toy and your mother's picture"
-      },
-      {
-        image: 'cemetery-sky',
-        title: 'example title..',
-        subtitle:
-          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+          "don't mourn him. he was dead long before we ever touched him. this stuff means nothing—it all goes"
       },
       {
         image: 'mans-ruin',
-        title: 'example title..',
+        title: 'built4less',
         subtitle:
-          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+          "call lincoln, get the lowest rate... call lincoln, get the lowest rate... (i'll lose what you give me)"
       },
       {
-        image: 'show-lights',
-        title: 'example title..',
-        subtitle:
-          "you are seven years old. you are a man. bury your first toy and your mother's picture"
-      },
-      {
-        image: 'halloween-garden',
-        title: 'example title..',
-        subtitle:
-          "you are seven years old. you are a man. bury your first toy and your mother's picture"
-      },
-      {
-        image: 'night-watch',
-        title: 'example title..',
-        subtitle:
-          "you are seven years old. you are a man. bury your first toy and your mother's picture"
-      },
-      {
-        image: 'slot-machine',
-        title: 'example title..',
+        image: 'kitana',
+        title: 'outerworld',
         subtitle:
           "you are seven years old. you are a man. bury your first toy and your mother's picture"
       },
       {
         image: 'hellraiser',
-        title: 'example title..',
+        title: 'real speed type',
         subtitle:
-          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+          "don't you see (we) want to kill you a thousand times, to the limits of eternity, if eternity could have limits?"
       },
       {
-        image: 'no-mans-land',
-        title: 'example title..',
+        image: 'pursuit-special',
+        title: 'pursuit special',
         subtitle:
           "you are seven years old. you are a man. bury your first toy and your mother's picture"
       },
@@ -99,50 +45,105 @@ export default [
           "you are seven years old. you are a man. bury your first toy and your mother's picture"
       },
       {
-        image: 'homestead',
+        image: 'bell-of-awakening',
         title: 'example title..',
         subtitle:
           "you are seven years old. you are a man. bury your first toy and your mother's picture"
       },
       {
-        image: 'old-school',
+        image: 'born-star',
+        title: 'born star',
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: 'cemetery-sky',
+        title: 'life outside',
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: 'no-mans-land',
         title: 'example title..',
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: 'show-lights',
+        title: 'streetlight',
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: 'slot-machine',
+        title: 'consolation prize',
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: 'night-watch',
+        title: 'night watch',
         subtitle:
           "you are seven years old. you are a man. bury your first toy and your mother's picture"
       },
       {
         image: 'trapdoor',
-        title: 'example title..',
+        title: 'drowning desire',
         subtitle:
           "you are seven years old. you are a man. bury your first toy and your mother's picture"
       },
       {
-        image: 'hotknive',
-        title: 'example title..',
-        subtitle:
-          "you are seven years old. you are a man. bury your first toy and your mother's picture"
-      },
-      {
-        image: 'punishment',
+        image: 'halloween-garden',
         title: 'example title..',
         subtitle:
           "you are seven years old. you are a man. bury your first toy and your mother's picture"
       },
       {
         image: 'western-depression',
+        title: 'western depression',
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: 'sacrifice',
         title: 'example title..',
         subtitle:
           "you are seven years old. you are a man. bury your first toy and your mother's picture"
       },
       {
         image: 'inner-garden',
+        title: 'interior garden',
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: 'old-school',
+        title: '2013 face reveal',
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: 'main-stage',
+        title: 'our main stage',
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+      {
+        image: 'hotknive',
+        title: 'hotknive',
+        subtitle:
+          "you are seven years old. you are a man. bury your first toy and your mother's picture"
+      },
+
+      {
+        image: 'scorpion-king',
         title: 'example title..',
         subtitle:
           "you are seven years old. you are a man. bury your first toy and your mother's picture"
       },
       {
-        image: 'pursuit-special',
-        title: 'example title..',
+        image: 'homestead',
+        title: 'homestea',
         subtitle:
           "you are seven years old. you are a man. bury your first toy and your mother's picture"
       }

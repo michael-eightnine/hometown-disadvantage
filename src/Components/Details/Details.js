@@ -61,7 +61,7 @@ class Details extends Component {
     // If it was set to true, reset after a timeout
     if (transitionState) {
       setTimeout(() => {
-        // this.updateTransitionState(false);
+        this.updateTransitionState(false);
       }, 8250);
     }
   };
