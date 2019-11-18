@@ -3,7 +3,7 @@ export default [
   {
     meta: {
       title: 'prayer card vendor',
-      subtitle: `aiding in: unhappiness, release of fear, insomnia, mysteries unveiled... a gift to die where you're from n we plan to collect`,
+      subtitle: `aiding in: unhappiness, release of fear, insomnia, mysteries unveiled... gave a gift to die where you're from n we plan to collect`,
       media: 'chapter-1-transition',
       mediaType: '.gif'
     },
@@ -66,7 +66,7 @@ export default [
         image: 'no-mans-land',
         title: 'land ov myne',
         subtitle:
-          "we had to leave em... no chance for none of us it we aint, can't say i minded, couldn't say i had time"
+          "we had to leave em... no chance for none of us it we ain't, can't say i minded, couldn't say i had time"
       },
       {
         image: 'show-lights',
@@ -101,7 +101,7 @@ export default [
         image: 'western-depression',
         title: 'western depression',
         subtitle:
-          'left me the ranch house as a parting gift, still aint moved out (more a curse n i think he knew that)'
+          "left me the ranch house as a parting gift, still ain't moved out (more a curse n i think he knew that)"
       },
       {
         image: 'inner-garden',
@@ -135,7 +135,7 @@ export default [
       },
       {
         image: 'scorpion-king',
-        title: 'example title..',
+        title: 'pyramid trap',
         subtitle:
           "to gomorrah. nothing we can say will stop him (not sure i'd want to) glory left for me"
       }
