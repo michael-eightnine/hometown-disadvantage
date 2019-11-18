@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
-import streamData from 'Data/streamData';
-import { IMAGE_CONTENT_PATH } from 'Data/constants';
+import { IMAGE_CONTENT_PATH, streamData } from 'Data';
 import logo from 'Svg/logo-horizontal.svg';
 import './splash.scss';
 
@@ -10,15 +10,13 @@ import './splash.scss';
  * Displays the HTA logo, and the first image from the `streamData` array
  * After 1 second, begins CSS transitions to prepare for a redirect to `/content-stream`
  *
+ * @param {object} props - react props
+ * @param {object} props.history - react router provided history object
+ *
  * @returns {ReactComponent} - Splash top-level route component
  */
 class Splash extends Component {
-  constructor() {
-    super();
-    this.state = {
-      prepareRedirect: false
-    };
-  }
+  state = { prepareRedirect: false };
 
   /**
    * On mount, wait 1 second and then set `prepareRedirect` to `true`
@@ -28,22 +26,21 @@ class Splash extends Component {
    * grid detail view, which contains the same image as this splash screen.
    */
   componentDidMount() {
+    const { history } = this.props;
     setTimeout(() => {
       this.setState({
         prepareRedirect: true
       });
     }, 1000);
     setTimeout(() => {
-      this.props.history.push('/content-stream/0/0');
+      history.push('/content-stream/0/0');
     }, 3000);
   }
 
   render() {
     const { prepareRedirect } = this.state;
     const featureImage = `${IMAGE_CONTENT_PATH}${streamData[0].content[0].image}.svg`;
-    const imageClass = prepareRedirect
-      ? 'splash__animate'
-      : '';
+    const imageClass = prepareRedirect ? 'splash__animate' : '';
 
     return (
       <section className="view view__splash">
@@ -57,4 +54,9 @@ class Splash extends Component {
     );
   }
 }
+
+Splash.propTypes = {
+  history: PropTypes.object.isRequired
+};
+
 export default withRouter(Splash);

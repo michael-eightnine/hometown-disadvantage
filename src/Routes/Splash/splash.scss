@@ -18,6 +18,7 @@
     height: 50vh;
     width: 50vh;
     transition: all 1.75s cubic-bezier(0.68, -0.45, 0.265, 1.35);
+    z-index: 2;
 
     img {
       display: block;
@@ -37,17 +38,26 @@
         max-height: 100%;
       }
 
-      @media(max-width: 900px) {
+      @media (max-width: 900px) {
         left: 20vw;
         width: 40vw;
         padding-top: 12.5vw;
       }
 
-      @media(max-width: 500px) {
+      @media (max-width: 500px) {
         width: 52.5vw;
         left: calc(52.5vw / 2);
         padding-top: 18vw;
       }
+    }
+  }
+
+  &__logo,
+  &__chapters {
+    transition: opacity 1.25s ease;
+    transition-delay: 0.25s;
+    &.splash__animate {
+      opacity: 0;
     }
   }
 
@@ -58,11 +68,5 @@
     transform: translateX(-50%);
     width: 55vh;
     max-width: 90%;
-    transition: opacity 1.25s ease;
-    transition-delay: .25s;
-
-    &.splash__animate {
-      opacity: 0;
-    }
   }
 }

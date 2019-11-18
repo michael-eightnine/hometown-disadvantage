@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Swipeable from 'react-swipeable';
 import { withRouter } from 'react-router-dom';
-import { IMAGE_CONTENT_PATH } from 'Data/constants';
-import streamContent from 'Data/streamData';
-import { DetailsTransition } from './';
+import { IMAGE_CONTENT_PATH, streamData } from 'Data';
+import DetailsTransition from './DetailsTransition';
 import './details.scss';
 
 /**
@@ -22,20 +21,14 @@ import './details.scss';
  * @param {number} props.count - total number of grid items
  * @param {number} props.current - current selected index relative to grid items array
  * @param {number} props.chapter - the current chapter of content to display items from
- * @param {number} props.nextChapter - the next chapter to load after ending this chapter
  *
  * @returns {ReactComponent} - Details component
  */
 class Details extends Component {
-  constructor() {
-    super();
-    this.state = {
-      transitionActive: false
-    };
-  }
+  state = { transitionActive: false };
 
   // Attach keypress event listener on mount
-  componentWillMount() {
+  componentDidMount() {
     window.addEventListener('keydown', this.handleKeyPress);
   }
 
@@ -44,9 +37,10 @@ class Details extends Component {
     window.removeEventListener('keydown', this.handleKeyPress);
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentDidUpdate(prevProps) {
+    const { chapter } = this.props;
     // If chapters haven't changed, exit early
-    if (this.props.chapter === nextProps.chapter) {
+    if (chapter === prevProps.chapter) {
       return;
     }
     // Otherwise the chapter has changed, and time to initiate transition changes
@@ -65,12 +59,12 @@ class Details extends Component {
     this.setState({ transitionActive: transitionState });
 
     // If it was set to true, reset after a timeout
-    if(transitionState) {
+    if (transitionState) {
       setTimeout(() => {
         this.updateTransitionState(false);
       }, 8250);
     }
-  }
+  };
 
   /**
    * Handle Route Change
@@ -85,17 +79,9 @@ class Details extends Component {
     // If we have a chapter transition active, do not redirect the route
     if (this.state.transitionActive) return;
 
-    const {
-      current,
-      nextItem,
-      prevItem,
-      count,
-      history,
-      chapter,
-      nextChapter
-    } = this.props;
+    const { current, nextItem, prevItem, count, history, chapter } = this.props;
     const atStart = chapter === 0 && current === 0;
-    const atEnd = chapter === streamContent.length - 1 && current === count;
+    const atEnd = chapter === streamData.length - 1 && current === count;
     // If we're at the starting or ending chapter and item and moving in that direction, do nothing
     if ((direction === 'prev' && atStart) || (direction === 'next' && atEnd))
       return;
@@ -106,24 +92,24 @@ class Details extends Component {
     switch (direction) {
       case 'next':
         newRoute = atChapterEnd
-          // If at the chapter end, go to the next chapter's first item
-          ? `/content-stream/${nextChapter}/0`
-          // Otherwise just go to the next item
-          : `/content-stream/${chapter}/${nextItem}`;
+          ? // If at the chapter end, go to the next chapter's first item
+            `/content-stream/${chapter + 1}/0`
+          : // Otherwise just go to the next item
+            `/content-stream/${chapter}/${nextItem}`;
         break;
       case 'prev':
         newRoute = atChapterStart
-          // If at the chapter start, go to the next chapter's first item
-          // this restarts the previous chapter, since we're moving backwards
-          ? `/content-stream/${nextChapter}/0`
-          // Otherwise just go to the previous item
-          : `/content-stream/${chapter}/${prevItem}`;
+          ? // If at the chapter start, go to the previous chapter's first item
+            // this restarts the previous chapter, since we're moving backwards
+            `/content-stream/${chapter - 1}/0`
+          : // Otherwise just go to the previous item
+            `/content-stream/${chapter}/${prevItem}`;
         break;
       default:
         newRoute = '/content-stream/0';
     }
     history.push(newRoute);
-  }
+  };
 
   /**
    * Handles arrow key & escape keypresses, updating our route accordignly
@@ -141,7 +127,7 @@ class Details extends Component {
         this.handleRouteChange('prev');
         break;
       }
-      case 'ArrowUp' || 38 : {
+      case 'ArrowUp' || 38: {
         e.preventDefault();
         this.handleRouteChange('prev');
         break;
@@ -152,7 +138,7 @@ class Details extends Component {
         this.handleRouteChange('next');
         break;
       }
-      case 'ArrowDown' || 40 : {
+      case 'ArrowDown' || 40: {
         e.preventDefault();
         this.handleRouteChange('next');
         break;
@@ -163,35 +149,30 @@ class Details extends Component {
         history.push(`/content-stream/${chapter}`);
         break;
       }
-      default: return;
+      default:
+        return;
     }
-  }
+  };
 
   render() {
     const {
-      item: {
-        image,
-        title,
-        subtitle
-      },
+      item: { image, title, subtitle },
       count,
       current,
       chapter
     } = this.props;
     const { transitionActive } = this.state;
     const atStart = chapter === 0 && current === 0;
-    const atEnd = chapter === streamContent.length - 1 && current === count;
+    const atEnd = chapter === streamData.length - 1 && current === count;
 
-    const transitionMetadata = streamContent[chapter].meta;
+    const transitionMetadata = streamData[chapter].meta;
     const imageSrc = `${IMAGE_CONTENT_PATH}${image}.svg`;
     const symbolSrc = `${IMAGE_CONTENT_PATH}${image}.jpg`;
 
     return (
       <Swipeable
-        onSwipedUp={() => this.handleRouteChange('next')}
         onSwipedLeft={() => this.handleRouteChange('next')}
         onSwipedRight={() => this.handleRouteChange('prev')}
-        onSwipedDown={() => this.handleRouteChange('prev')}
       >
         <DetailsTransition
           isActive={transitionActive}
@@ -249,8 +230,7 @@ Details.propTypes = {
   count: PropTypes.number.isRequired,
   current: PropTypes.number.isRequired,
   history: PropTypes.object.isRequired,
-  chapter: PropTypes.number.isRequired,
-  nextChapter: PropTypes.number.isRequired
+  chapter: PropTypes.number.isRequired
 };
 
 export default withRouter(Details);

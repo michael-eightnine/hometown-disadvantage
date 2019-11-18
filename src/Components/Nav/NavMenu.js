@@ -14,10 +14,10 @@ import './nav.scss';
 const NavMenu = () => {
   // This component exists outside of the Router's `<Switch>` case
   // So window.location.pathname is used instead of `withRouter` props
-  const { location: { pathname } } = window;
-  const navClass = pathname === '/'
-    ? 'nav--is-splash'
-    : '';
+  const {
+    location: { pathname }
+  } = window;
+  const navClass = pathname === '/' ? 'nav--is-splash' : '';
 
   // Get the current chapter from the pathname
   // If no chapter is present, defaults to 0 (first chapter)
@@ -37,10 +37,7 @@ const NavMenu = () => {
           </NavLink>
         </li>
         <li className="nav__link">
-          <NavLink
-            to="/about-the-hta"
-            activeClassName="nav-link--active"
-          >
+          <NavLink to="/about-the-hta" activeClassName="nav-link--active">
             Learn-About-It
           </NavLink>
         </li>

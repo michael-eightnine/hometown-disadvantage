@@ -4,11 +4,7 @@ import { withRouter } from 'react-router-dom';
 
 class GridControls extends Component {
   handleChapterChange = direction => {
-    const {
-      chapter,
-      chapterMax,
-      history
-    } = this.props;
+    const { chapter, chapterMax, history } = this.props;
     const atStart = chapter === 0;
     const atEnd = chapter === chapterMax;
     // If we're at the starting or ending chapter and moving in that direction, do nothing
@@ -27,7 +23,7 @@ class GridControls extends Component {
         newRoute = '/content-stream/0';
     }
     history.push(newRoute);
-  }
+  };
 
   render() {
     const { chapterTitle, chapterMax, chapter } = this.props;
@@ -41,7 +37,8 @@ class GridControls extends Component {
           <span
             onClick={() => this.handleChapterChange('prev')}
             disabled={atStart}
-            className="standard-link">
+            className="standard-link"
+          >
             [prev]
           </span>
         </div>
@@ -49,7 +46,8 @@ class GridControls extends Component {
           <span
             onClick={() => this.handleChapterChange('next')}
             disabled={atEnd}
-            className="standard-link">
+            className="standard-link"
+          >
             [next]
           </span>
         </div>

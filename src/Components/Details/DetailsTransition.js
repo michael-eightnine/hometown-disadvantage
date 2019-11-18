@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IMAGE_CONTENT_PATH } from 'Data/constants';
+import { IMAGE_CONTENT_PATH } from 'Data';
 
 /**
  * Details Transition
@@ -36,13 +36,13 @@ const DetailsTransition = ({
       </h1>
       <p className="details__transition-subtitle">{subtitle}</p>
       {/* Only display the media content if media is provided and the transition is visible */}
-      {media && isActive &&
+      {media && isActive && (
         <img
           className="details__transition-media"
           src={`${IMAGE_CONTENT_PATH}${media}${mediaType}`}
           alt=":)"
         />
-      }
+      )}
     </div>
   );
 };
