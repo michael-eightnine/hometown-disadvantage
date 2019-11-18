@@ -7,8 +7,9 @@ Reborn yet again, Hometown Advantage is now The Hometown [dis]Advantage. Brand n
 ---
 
 **Current Chapters**
-1. Polarizing Visions
-2. Lowlight & Dark Times
+1. Prayer Card Vendor
+2. Polarizing Visions
+3. Lowlight & Dark Times
 
 ---
 
