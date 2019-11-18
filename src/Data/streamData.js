@@ -89,7 +89,7 @@ export default [
         image: 'trapdoor',
         title: 'drowning desire',
         subtitle:
-          "said i'd let her kill me if she did, ain't never been one to put down another on account of taste"
+          "said i'd let her kill me if she wanted, ain't never been one to put down another on account of taste"
       },
       {
         image: 'halloween-garden',
