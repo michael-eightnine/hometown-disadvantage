@@ -66,7 +66,7 @@ export default [
         image: 'no-mans-land',
         title: 'land ov myne',
         subtitle:
-          "we had to leave em... no chance for none of us it we ain't, can't say i minded, couldn't say i had time"
+          "we had to leave em... no chance for none of us if we didn't... can't say i minded, couldn't say i had time"
       },
       {
         image: 'show-lights',
