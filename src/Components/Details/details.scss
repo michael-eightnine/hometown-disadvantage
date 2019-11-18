@@ -26,7 +26,7 @@ $symbol-height: 100px;
 
       @media (max-width: 500px) {
         width: 52.5vw;
-        padding-top: 45vw;
+        padding-top: 30vw;
       }
     }
   }
@@ -75,6 +75,10 @@ $symbol-height: 100px;
       left: 0;
       font-size: 36px;
       font-style: italic;
+
+      @media (max-width: 500px) {
+        min-width: 45vw;
+      }
     }
 
     p {
