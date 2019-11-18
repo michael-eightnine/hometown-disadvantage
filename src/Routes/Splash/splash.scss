@@ -47,7 +47,8 @@
       @media (max-width: 500px) {
         width: 52.5vw;
         left: calc(52.5vw / 2);
-        padding-top: 18vw;
+        padding-top: 45vw;
+        height: calc(100vh - 60px);
       }
     }
   }

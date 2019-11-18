@@ -17,16 +17,16 @@ $symbol-height: 100px;
       max-width: 100%;
       max-height: 100%;
 
-      @media(max-width: 900px) {
+      @media (max-width: 900px) {
         width: 40vw;
         max-width: none;
         max-height: none;
         padding-top: 12.5vw;
       }
 
-      @media(max-width: 500px) {
+      @media (max-width: 500px) {
         width: 52.5vw;
-        padding-top: 18vw;
+        padding-top: 45vw;
       }
     }
   }
@@ -38,7 +38,7 @@ $symbol-height: 100px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 10px;
-    letter-spacing: .25rem;
+    letter-spacing: 0.25rem;
     white-space: nowrap;
   }
 
@@ -52,14 +52,14 @@ $symbol-height: 100px;
     font-size: 10px;
     text-align: left;
     line-height: 1.4;
-    letter-spacing: .4rem;
+    letter-spacing: 0.4rem;
     text-transform: uppercase;
-    background-color: #FFF;
+    background-color: #fff;
     transform: translateX(-50%) rotate(-90deg);
     word-break: keep-all;
 
-    @media(max-width: 500px) {
-      left: 20px
+    @media (max-width: 500px) {
+      left: 20px;
     }
   }
 
@@ -84,9 +84,9 @@ $symbol-height: 100px;
       width: 67%;
       font-size: 12px;
       line-height: 1.4;
-      letter-spacing: .05rem;
+      letter-spacing: 0.05rem;
 
-      @media(max-width: 500px) {
+      @media (max-width: 500px) {
         bottom: 27%;
         right: calc(-50px);
       }
@@ -111,7 +111,7 @@ $symbol-height: 100px;
     transform: translateY(-50%);
     font-size: 12px;
     font-style: italic;
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
 
     a {
       display: block;
@@ -136,13 +136,13 @@ $symbol-height: 100px;
     left: 0;
     top: 0;
     z-index: 20;
-    transition: opacity .5s ease;
+    transition: opacity 0.5s ease;
 
-    @media(max-width: 900px) {
+    @media (max-width: 900px) {
       width: calc(100vw - 150px);
     }
 
-    @media(max-width: 500px) {
+    @media (max-width: 500px) {
       height: calc(100vh - 80px);
     }
 
@@ -168,13 +168,13 @@ $symbol-height: 100px;
     z-index: 2;
     text-shadow: -1px 1px 0 #fff, -1px -1px 0 #fff;
 
-    @media(max-width: 900px) {
+    @media (max-width: 900px) {
       font-size: 48px;
       bottom: 50px;
       right: -15px;
     }
 
-    @media(max-width: 500px) {
+    @media (max-width: 500px) {
       width: calc(100% + 100px);
       bottom: 10%;
       right: -120px;
@@ -187,11 +187,11 @@ $symbol-height: 100px;
       width: 100%;
       margin-bottom: 5px;
       padding: 3px 6px;
-      background-color: #FFF;
+      background-color: #fff;
       font-size: 10px;
       text-align: left;
       line-height: 1.4;
-      letter-spacing: .25rem;
+      letter-spacing: 0.25rem;
       text-transform: uppercase;
       font-style: normal;
       text-shadow: none;
@@ -206,18 +206,18 @@ $symbol-height: 100px;
     font-size: 12px;
     padding: 3px 6px;
     line-height: 1.5;
-    letter-spacing: .05rem;
-    background-color: #FFF;
+    letter-spacing: 0.05rem;
+    background-color: #fff;
     z-index: 2;
 
-    @media(max-width: 500px) {
+    @media (max-width: 500px) {
       width: 50%;
       max-width: none;
       left: 20%;
       top: 50%;
     }
 
-    @media(max-width: 500px) {
+    @media (max-width: 500px) {
       top: 35%;
     }
   }
@@ -231,7 +231,7 @@ $symbol-height: 100px;
     width: 495px;
     min-height: 55vh;
 
-    @media(max-width: 900px) {
+    @media (max-width: 900px) {
       min-height: 0;
     }
   }
