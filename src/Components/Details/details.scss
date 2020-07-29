@@ -116,10 +116,11 @@ $symbol-height: 100px;
     font-size: 12px;
     font-style: italic;
     letter-spacing: 0.1rem;
+  }
 
-    a {
-      display: block;
-    }
+  &__prev,
+  &__next {
+    display: block;
   }
 
   &__prev {

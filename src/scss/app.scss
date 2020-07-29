@@ -1,7 +1,9 @@
 @import 'reset';
 @import 'vars';
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   position: relative;
@@ -24,7 +26,7 @@ body {
   width: $nav-outer-width;
   padding: $app-padding 65px $app-padding $nav-padding;
 
-  @media(max-width: 900px) {
+  @media (max-width: 900px) {
     width: 180px;
     padding: 20px 35px 20px 20px;
   }
@@ -34,12 +36,12 @@ body {
   width: calc(100% - #{$nav-outer-width});
   padding: $app-padding 0 $app-padding $app-padding;
 
-  @media(max-width: 900px) {
+  @media (max-width: 900px) {
     width: calc(100% - 150px);
     padding: 20px;
   }
 
-  @media(max-width: 500px) {
+  @media (max-width: 500px) {
     padding: 15px 0 15px 15px;
   }
 }
@@ -51,9 +53,31 @@ body {
   text-decoration: underline;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: #fff;
     background-color: #000;
+  }
+
+  &[disabled] {
+    text-decoration: line-through;
+    pointer-events: none;
+    cursor: normal;
+  }
+}
+
+.unstyled-button {
+  font-style: inherit;
+  border: none;
+  font-family: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border-radius: 0;
+
+  &:focus {
+    outline: none;
   }
 
   &[disabled] {

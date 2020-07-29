@@ -1,22 +1,31 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
+import { PREVIOUS, NEXT } from 'Data';
 
-class GridControls extends Component {
+/**
+ * Navigation/control component that displays in the `Grid` component. Provides an absolute positioned UI box
+ * that displays the current chapter title and previous/next buttons. Buttons are only enabled if the user
+ * can navigate in that direction (ex: the last chapter has the "next" button disabled)
+ *
+ * @param {object} props - react props
+ * @param {number} props.chapter - the index of the current chapter within the streamContent object
+ * @param {number} props.chapterMax - the max number of chapters that can be navigated to
+ * @param {string} props.chapterTitle - the title of the current chapter being viewed in the grid
+ * @param {object} props.history - react router provided history object
+ *
+ * @returns {ReactComponent} - grid control markup
+ */
+class GridControls extends PureComponent {
   handleChapterChange = direction => {
-    const { chapter, chapterMax, history } = this.props;
-    const atStart = chapter === 0;
-    const atEnd = chapter === chapterMax;
-    // If we're at the starting or ending chapter and moving in that direction, do nothing
-    if ((direction === 'prev' && atStart) || (direction === 'next' && atEnd))
-      return;
+    const { chapter, history } = this.props;
 
     let newRoute;
     switch (direction) {
-      case 'next':
+      case NEXT:
         newRoute = `/content-stream/${chapter + 1}`;
         break;
-      case 'prev':
+      case PREVIOUS:
         newRoute = `/content-stream/${chapter - 1}`;
         break;
       default:
@@ -34,22 +43,22 @@ class GridControls extends Component {
       <div className="grid__controls">
         <div className="grid__chapter-title">{chapterTitle}</div>
         <div className="grid__prev">
-          <span
-            onClick={() => this.handleChapterChange('prev')}
+          <button
+            onClick={() => this.handleChapterChange(PREVIOUS)}
             disabled={atStart}
-            className="standard-link"
+            className="standard-link unstyled-button"
           >
             [prev]
-          </span>
+          </button>
         </div>
         <div className="grid__next">
-          <span
-            onClick={() => this.handleChapterChange('next')}
+          <button
+            onClick={() => this.handleChapterChange(NEXT)}
             disabled={atEnd}
-            className="standard-link"
+            className="standard-link unstyled-button"
           >
             [next]
-          </span>
+          </button>
         </div>
       </div>
     );
