@@ -2,6 +2,11 @@ import React from 'react';
 import map from 'Svg/hta-map.svg';
 import './aboutView.scss';
 
+/**
+ * Content only component for the "About HTA" route
+ *
+ * @returns {ReactComponent} - content component for the About route
+ */
 const AboutView = () => (
   <section className="view view__about">
     <div className="about__image">

@@ -15,7 +15,7 @@
     max-width: 160px;
     min-height: 67px;
 
-    @media(max-width: 900px) {
+    @media (max-width: 900px) {
       max-width: 120px;
     }
   }
@@ -63,9 +63,11 @@
       }
 
       &:hover,
+      &:focus,
       &.nav-link--active {
         background-color: #000;
         color: #fff;
+        outline: none;
 
         &:before,
         &:after {

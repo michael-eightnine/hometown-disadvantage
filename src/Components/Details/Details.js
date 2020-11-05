@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Swipeable from 'react-swipeable';
 import { withRouter } from 'react-router-dom';
-import { IMAGE_CONTENT_PATH, streamData } from 'Data';
+import { IMAGE_CONTENT_PATH, streamData, PREVIOUS, NEXT } from 'Data';
 import DetailsTransition from './DetailsTransition';
 import './details.scss';
 
@@ -39,12 +39,10 @@ class Details extends Component {
 
   componentDidUpdate(prevProps) {
     const { chapter } = this.props;
-    // If chapters haven't changed, exit early
-    if (chapter === prevProps.chapter) {
-      return;
+    // If the chapter has changed, its time to initiate transition changes
+    if (chapter !== prevProps.chapter) {
+      this.updateTransitionState(true);
     }
-    // Otherwise the chapter has changed, and time to initiate transition changes
-    this.updateTransitionState(true);
   }
 
   /**
@@ -62,7 +60,7 @@ class Details extends Component {
     if (transitionState) {
       setTimeout(() => {
         this.updateTransitionState(false);
-      }, 8250);
+      }, 8250); // 8.25 seconds for the user to view the transition UI
     }
   };
 
@@ -73,31 +71,32 @@ class Details extends Component {
    * Redirects to the next/prev item based on the provided `direction`
    * When reaching the start/end of a chapter, it redirects to the next chapter
    *
-   * @param {string} direction - is this going to 'prev' or 'next'?
+   * @param {string} direction - is this going to PREVIOUS or NEXT?
    */
   handleRouteChange = direction => {
     // If we have a chapter transition active, do not redirect the route
-    if (this.state.transitionActive) return;
+    const { transitionActive } = this.state;
+    if (transitionActive) return;
 
     const { current, nextItem, prevItem, count, history, chapter } = this.props;
     const atStart = chapter === 0 && current === 0;
     const atEnd = chapter === streamData.length - 1 && current === count;
     // If we're at the starting or ending chapter and item and moving in that direction, do nothing
-    if ((direction === 'prev' && atStart) || (direction === 'next' && atEnd))
+    if ((direction === PREVIOUS && atStart) || (direction === NEXT && atEnd))
       return;
 
     const atChapterStart = current === 0;
     const atChapterEnd = current === count;
     let newRoute;
     switch (direction) {
-      case 'next':
+      case NEXT:
         newRoute = atChapterEnd
           ? // If at the chapter end, go to the next chapter's first item
             `/content-stream/${chapter + 1}/0`
           : // Otherwise just go to the next item
             `/content-stream/${chapter}/${nextItem}`;
         break;
-      case 'prev':
+      case PREVIOUS:
         newRoute = atChapterStart
           ? // If at the chapter start, go to the previous chapter's first item
             // this restarts the previous chapter, since we're moving backwards
@@ -124,23 +123,23 @@ class Details extends Component {
       // Left & Up arrows go to previous
       case 'ArrowLeft' || 37: {
         e.preventDefault();
-        this.handleRouteChange('prev');
+        this.handleRouteChange(PREVIOUS);
         break;
       }
       case 'ArrowUp' || 38: {
         e.preventDefault();
-        this.handleRouteChange('prev');
+        this.handleRouteChange(PREVIOUS);
         break;
       }
       // Right & Down arrows go to next
       case 'ArrowRight' || 39: {
         e.preventDefault();
-        this.handleRouteChange('next');
+        this.handleRouteChange(NEXT);
         break;
       }
       case 'ArrowDown' || 40: {
         e.preventDefault();
-        this.handleRouteChange('next');
+        this.handleRouteChange(NEXT);
         break;
       }
       // Escape "closes" this view, returning to grid
@@ -149,6 +148,7 @@ class Details extends Component {
         history.push(`/content-stream/${chapter}`);
         break;
       }
+      // Other keys have no handler functionality and are not prevented
       default:
         return;
     }
@@ -171,15 +171,12 @@ class Details extends Component {
 
     return (
       <Swipeable
-        onSwipedLeft={() => this.handleRouteChange('next')}
-        onSwipedRight={() => this.handleRouteChange('prev')}
+        onSwipedLeft={() => this.handleRouteChange(NEXT)}
+        onSwipedRight={() => this.handleRouteChange(PREVIOUS)}
       >
         <DetailsTransition
+          {...transitionMetadata}
           isActive={transitionActive}
-          title={transitionMetadata.title}
-          subtitle={transitionMetadata.subtitle}
-          media={transitionMetadata.media}
-          mediaType={transitionMetadata.mediaType}
           chapter={chapter}
         />
         <div className="grid__details">
@@ -198,20 +195,20 @@ class Details extends Component {
             <p>[{subtitle}]</p>
           </div>
           <div className="details__control">
-            <div
-              className="details__next standard-link"
-              onClick={() => this.handleRouteChange('next')}
+            <button
+              className="details__next standard-link unstyled-button"
+              onClick={() => this.handleRouteChange(NEXT)}
               disabled={atEnd}
             >
               [next]
-            </div>
-            <div
-              className="details__prev standard-link"
-              onClick={() => this.handleRouteChange('prev')}
+            </button>
+            <button
+              className="details__prev standard-link unstyled-button"
+              onClick={() => this.handleRouteChange(PREVIOUS)}
               disabled={atStart}
             >
               [prev]
-            </div>
+            </button>
           </div>
         </div>
       </Swipeable>
