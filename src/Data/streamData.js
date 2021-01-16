@@ -29,7 +29,7 @@ export default [
         image: 'retribution',
         title: 'warm retribution',
         subtitle:
-          'kept the cold away w the barrel pressed to my cheek, had 2 keep it hot n so i woke up alone'
+          'kept the cold away w the barrel pressed to my cheek, had 2 keep it hot n so i woke up seein lookin at no one'
       },
       {
         image: 'garmonbozia',
@@ -59,7 +59,7 @@ export default [
         image: 'heavens_gone',
         title: "heaven's sky ranch",
         subtitle:
-          "was always particular to the drive by preachers, respected 'em for knowin' there's no saving for this town'"
+          "was always particular to the drive by preachers, respected 'em for knowin' there's no saving for this town"
       },
       {
         image: 'just_resting',
