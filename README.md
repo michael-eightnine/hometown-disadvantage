@@ -7,14 +7,10 @@ Reborn yet again, Hometown Advantage is now The Hometown [dis]Advantage. Brand n
 ---
 
 **Current Chapters**
-1. Prayer Card Vendor
-2. Polarizing Visions
-3. Lowlight & Dark Times
+
+1. Heartland Shaped Hole
+2. Prayer Card Vendor
+3. Polarizing Visions
+4. Lowlight & Dark Times
 
 ---
-
-_Under the hood (for those who care):_
-- React 16
-- React Router 4
-- React Swipeable
-- Boostrapped with CreateReactApp, then ejected for further customization
