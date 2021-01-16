@@ -1,10 +1,146 @@
 export default [
-  // CHAPTER 1 (Frame drawings)
+  {
+    meta: {
+      title: 'heartland shaped hole',
+      subtitle: `the trail home felt warmer last visit, can't tell the lie that i wasn't warmer 2—you held my hand so tight when you said hello, couldn't tell that I'd been cryin'`,
+      media: 'chapter-1-transition',
+      mediaType: '.gif'
+    },
+    content: [
+      {
+        image: 'three_of_a_kind',
+        title: "caught dealin' smart",
+        subtitle:
+          "three times i took the table, three shots in the caller's chest, three years i been gone now always runnin' west"
+      },
+      {
+        image: 'angelic',
+        title: "angels' dust",
+        subtitle:
+          'a gleam of burnished bronze, the sound of a multitude, lungs felt like lightning n fire'
+      },
+      {
+        image: 'bad_dealing',
+        title: 'dealt 4 hearts',
+        subtitle:
+          "some men can't handle losin', n some pretend they don't know the feelin'—I've always been surprised with winnin'"
+      },
+      {
+        image: 'retribution',
+        title: 'warm retribution',
+        subtitle:
+          'kept the cold away w the barrel pressed to my cheek, had 2 keep it hot n so i woke up alone'
+      },
+      {
+        image: 'garmonbozia',
+        title: 'texan garmonbozia',
+        subtitle:
+          "alone within my cell i know i ain't done right... they'll bury her tomorrow, but they're hanging me 2nite"
+      },
+      {
+        image: 'sayonara',
+        title: 'sayonara',
+        subtitle:
+          'honest hearts survivalist, sad i never had the guts to get myself up out the grave the 2nd time'
+      },
+      {
+        image: 'red_rock_casino',
+        title: 'atomic liquor',
+        subtitle:
+          'whiskey only barely keeps off the mind sickness these days, bout better off shootin kerosene'
+      },
+      {
+        image: 'branded_mark',
+        title: "secora, o' secora",
+        subtitle:
+          "a fading touch to your velvet hand n it eases the pain—life is no more but (now) we're together"
+      },
+      {
+        image: 'heavens_gone',
+        title: "heaven's sky ranch",
+        subtitle:
+          "was always particular to the drive by preachers, respected 'em for knowin' there's no saving for this town'"
+      },
+      {
+        image: 'just_resting',
+        title: 'lifeless (my brother)',
+        subtitle:
+          'left with a terrible silence, just 10 seconds more... seventeen inches of flame from a bad 44'
+      },
+      {
+        image: 'ritual_900',
+        title: 'resting ritual',
+        subtitle:
+          "crimson spot on the white vest of the man b'side me, glad to see it ain't me i got enough scars inside me"
+      },
+      {
+        image: 'ghost_wife',
+        title: '6ix fingered jake',
+        subtitle:
+          "that's from the flash. that's where the red comes from. take a picture of you, same thing would happen."
+      },
+      {
+        image: 'hellmaster',
+        title: 'hellmaster',
+        subtitle:
+          'nobody knew where he came from, they only seen he came in (n things been changin for the worse since then)'
+      },
+      {
+        image: 'roadkil',
+        title: 'roadkil',
+        subtitle:
+          "who needs mesquite when ya got concrete! fix ya up an omlette? in a hurry are ya... its hotter'n hell out here"
+      },
+      {
+        image: 'el_paso',
+        title: 'plateau steppe',
+        subtitle:
+          "everything's gone in life, nothin's left... back in el paso my love would mean death"
+      },
+      {
+        image: 'everyday_feelings',
+        title: "master's call",
+        subtitle:
+          "everday feelings... take me out of this prison. even the mountains get halos—but i know i've done wrong"
+      },
+      {
+        image: 'laredo',
+        title: 'laredo',
+        subtitle:
+          "death march got sang n carried along—cold as clay in white linen i couldn't wake for that song"
+      },
+      {
+        image: 'sunburnt',
+        title: 'red burns',
+        subtitle:
+          'false oasis with a real relief... the long march home to see my lover bleached below the noonsun'
+      },
+      {
+        image: 'full_circle',
+        title: 'passionate hand',
+        subtitle:
+          "hangin judge shocked to see a neck he'd known b4 (almost hesitated) but some folks keep comin back for more"
+      },
+      {
+        image: 'lucky_7',
+        title: 'hung w new shoes',
+        subtitle:
+          "cowboys i never laid eyes on are tyin' my hands to my back—a knot pulls tight b4 the sky grows dark"
+      },
+      {
+        image: 'without_u',
+        title: 'saguaro',
+        subtitle:
+          'aint no need for a tombstone with no visitors—leave me like christ on the biggest cactus ya find'
+      }
+    ]
+  },
+  // CHAPTER 2 (Frame drawings)
   {
     meta: {
       title: 'prayer card vendor',
       subtitle: `aiding in: unhappiness, release of fear, insomnia, mysteries unveiled... gave a gift to die where you're from n we plan to collect`,
-      media: 'chapter-1-transition',
+      media: 'chapter-2-transition',
       mediaType: '.gif'
     },
     content: [
@@ -141,12 +277,12 @@ export default [
       }
     ]
   },
-  // CHAPTER 2 (Red & Blue drawings)
+  // CHAPTER 3 (Red & Blue drawings)
   {
     meta: {
       title: 'polarizing visions',
       subtitle: `vision splits apart around the 3rd balloon—told myself to always remember that moment n' it's clear today from march till tomorrow`,
-      media: 'chapter-2-transition',
+      media: 'chapter-3-transition',
       mediaType: '.gif'
     },
     content: [
@@ -227,12 +363,12 @@ export default [
       }
     ]
   },
-  // CHAPTER 3 (Black lined drawings)
+  // CHAPTER 4 (Black lined drawings)
   {
     meta: {
       title: 'lowlight & dark times',
       subtitle: `december 2 march about the coldest months—inside diggin the grave n' outside mercedes mercedes. found em right around 5 feet down`,
-      media: 'chapter-3-transition',
+      media: 'chapter-4-transition',
       mediaType: '.gif'
     },
     content: [
