@@ -29,7 +29,7 @@ export default [
         image: 'retribution',
         title: 'warm retribution',
         subtitle:
-          'kept the cold away w the barrel pressed to my cheek, had 2 keep it hot n so i woke up seein lookin at no one'
+          'kept the cold away w the barrel pressed to my cheek, had 2 keep it hot n so i woke up lookin for no one'
       },
       {
         image: 'garmonbozia',
